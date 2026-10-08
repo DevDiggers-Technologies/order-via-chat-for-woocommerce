@@ -1,0 +1,216 @@
+/**
+ * Admin styles: the button preview, the dashboard widgets and the WhatsApp box on the order
+ * edit screen.
+ */
+
+@whatsapp: #25d366;
+@primary: var(--ddfw-primary-color, #0256ff);
+@muted: #646970;
+@border: #e5e7eb;
+
+.ddwcpvw-hide {
+    display: none !important;
+}
+
+.ddwcpvw-button-preview-wrap {
+    background: #f6f7f7;
+    border: 1px dashed #dcdcde;
+    border-radius: 10px;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.ddwcpvw-button-preview {
+    align-items: center;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 8px;
+    justify-content: center;
+    padding: 11px 20px;
+    transition: all 0.15s ease;
+
+    &.ddwcpvw-full-width {
+        display: flex;
+    }
+}
+
+.ddwcpvw-button-preview-icon {
+    display: inline-flex;
+}
+
+// Dashboard widgets.
+.ddwcpvw-dash-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.ddwcpvw-dash-list-item {
+    align-items: center;
+    border-bottom: 1px solid #f0f0f1;
+    color: inherit;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 10px 0;
+    text-decoration: none;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    &:hover strong {
+        color: #0256ff;
+    }
+}
+
+.ddwcpvw-dash-thumb {
+    flex: none;
+    line-height: 0;
+
+    img {
+        border: 1px solid #eceef1;
+        border-radius: 8px;
+        display: block;
+        height: 40px;
+        object-fit: cover;
+        width: 40px;
+    }
+}
+
+.ddwcpvw-dash-list-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+
+    strong {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    span {
+        color: @muted;
+        font-size: 12px;
+    }
+}
+
+.ddwcpvw-dash-list-value {
+    color: var(--ddfw-success-color, #01cc44);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ddwcpvw-dash-list-more {
+    margin: 12px 0 0;
+
+    a {
+        font-size: 13px;
+        text-decoration: none;
+    }
+}
+
+.ddwcpvw-dash-empty {
+    color: @muted;
+    padding: 24px 8px;
+    text-align: center;
+
+    strong {
+        color: #50575e;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    p {
+        font-size: 12px;
+        margin: 0;
+    }
+}
+
+.ddwcpvw-dash-note {
+    margin: 16px 0 0;
+}
+
+.ddwcpvw-checklist-progress {
+    background: #f0f0f1;
+    border-radius: 999px;
+    height: 6px;
+    overflow: hidden;
+
+    span {
+        background: @whatsapp;
+        display: block;
+        height: 100%;
+    }
+}
+
+.ddwcpvw-checklist-count {
+    color: @muted;
+    font-size: 12px;
+    margin: 8px 0 4px;
+}
+
+.ddwcpvw-checklist-item {
+    align-items: flex-start;
+    border-bottom: 1px solid #f0f0f1;
+    color: inherit;
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    text-decoration: none;
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    &:hover strong {
+        color: #0256ff;
+    }
+}
+
+.ddwcpvw-checklist-mark {
+    align-items: center;
+    border: 2px solid #c3c4c7;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-flex;
+    flex: none;
+    font-size: 12px;
+    font-weight: 700;
+    height: 20px;
+    justify-content: center;
+    margin-top: 1px;
+    width: 20px;
+}
+
+.ddwcpvw-checklist-item-done {
+    .ddwcpvw-checklist-mark {
+        background: @whatsapp;
+        border-color: @whatsapp;
+    }
+
+    strong {
+        color: @muted;
+        text-decoration: line-through;
+    }
+}
+
+// Order edit screen.
+.ddwcpvw-order-box {
+    textarea {
+        font-size: 12px;
+        width: 100%;
+    }
+}
+
+.ddwcpvw-order-box-phone {
+    font-weight: 600;
+}
+
+.ddwcpvw-order-box-send {
+    text-align: center;
+    width: 100%;
+}

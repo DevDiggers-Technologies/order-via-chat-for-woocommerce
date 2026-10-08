@@ -1,0 +1,1252 @@
+# Copyright (C) 2026 DevDiggers
+# This file is distributed under the GPLv3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Order via Chat for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/order-via-chat-for-woocommerce\n"
+"POT-Creation-Date: 2026-10-08 19:56:36+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: functions.php:96
+#. translators: %1$s: opening link tag, %2$s: closing link tag
+msgid ""
+"Order via Chat for WooCommerce is activated but not effective. It requires "
+"%1$sWooCommerce%2$s in order to work."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Order via Chat for WooCommerce"
+msgstr ""
+
+#: functions.php:135 includes/admin-dashboard.php:72
+msgid "Dashboard"
+msgstr ""
+
+#: functions.php:137 includes/admin-dashboard.php:92
+msgid "Configuration"
+msgstr ""
+
+#: functions.php:139
+msgid "Setup Wizard"
+msgstr ""
+
+#: functions.php:141
+msgid "Upgrade to Pro"
+msgstr ""
+
+#: functions.php:158
+msgid "Support"
+msgstr ""
+
+#: functions.php:159
+msgid "Documentation"
+msgstr ""
+
+#: functions.php:160 includes/admin-dashboard.php:337
+msgid "Review"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:126
+msgid "Add your WhatsApp number"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:127
+msgid "The buttons stay hidden until there is a number to send orders to."
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:132
+msgid "Switch WhatsApp ordering on"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:133
+msgid "Turn on the plugin status in the General tab."
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:138
+msgid "Place the button"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:139
+msgid "Show it on product pages, the cart, or shop pages."
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:144
+msgid "Send your first order request"
+msgstr ""
+
+#: helper/dashboard/dashboard-helper.php:145
+msgid "Tap the WhatsApp button on one of your products to try the whole journey."
+msgstr ""
+
+#: includes/admin/admin-functions.php:108
+msgid "WhatsApp"
+msgstr ""
+
+#: includes/admin/admin-functions.php:128
+msgid "This order has no billing phone, so there is no one to message."
+msgstr ""
+
+#: includes/admin/admin-functions.php:135
+#. translators: 1: customer first name, 2: order number, 3: order status.
+msgid "Hi %1$s, this is about your order #%2$s, which is now %3$s."
+msgstr ""
+
+#: includes/admin/admin-functions.php:143
+msgid "Message"
+msgstr ""
+
+#: includes/admin/admin-functions.php:146
+msgid "Open in WhatsApp"
+msgstr ""
+
+#: includes/admin/admin-functions.php:149
+msgid "Opens WhatsApp on this device with the message ready to send."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:44 includes/admin-dashboard.php:60
+#: includes/admin-dashboard.php:65 includes/admin-dashboard.php:66
+msgid "Order via Chat"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:45
+msgid ""
+"Welcome to Order via Chat for WooCommerce. Two quick steps and your "
+"customers can send you orders on WhatsApp."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:49
+msgid "Welcome"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:53 includes/admin-dashboard.php:96
+msgid "General"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:54
+msgid "Where should orders go?"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:55
+msgid "Add the WhatsApp number that receives order requests."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:60 includes/admin-dashboard.php:101
+msgid "Display"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:61
+msgid "Where customers can order"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:62
+msgid ""
+"Choose where the WhatsApp button appears. You can fine-tune its look later "
+"under Configuration, Display."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:67
+msgid "Ready!"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:68
+msgid "You are ready to take orders on WhatsApp."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:69
+msgid ""
+"Open one of your products and tap the WhatsApp button to try the whole "
+"journey yourself."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:96
+msgid "Welcome to Order via Chat!"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:98
+msgid ""
+"Let customers order in the app they already use every day. In the next two "
+"steps you will add your WhatsApp number and place the button. It takes "
+"about a minute."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:114
+#: templates/admin/configuration/general-configuration-template.php:44
+msgid "Your WhatsApp Number"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:115
+msgid ""
+"With the country code. It can be your personal WhatsApp or a WhatsApp "
+"Business app number."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:123
+#: templates/admin/configuration/general-configuration-template.php:35
+msgid "Status"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:124
+msgid "Enable WhatsApp ordering on my store"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:125
+msgid "You can switch it off at any time without losing your settings."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:132
+#: templates/admin/configuration/general-configuration-template.php:61
+msgid "Guest Customers"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:133
+#: templates/admin/configuration/general-configuration-template.php:62
+msgid "Let visitors order without an account"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:134
+msgid "Guests add their delivery details in a short popup before WhatsApp opens."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:153
+#: templates/admin/configuration/display-configuration-template.php:35
+msgid "Product Page"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:154
+#: templates/admin/configuration/display-configuration-template.php:36
+msgid ""
+"Most orders start here. The default spot sits at the end of the product "
+"summary, below the add to cart area."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:162
+#: templates/admin/configuration/display-configuration-template.php:44
+msgid "Cart Page"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:163
+#: templates/admin/configuration/display-configuration-template.php:45
+msgid "Lets customers send their whole cart to you in one message."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:171
+#: templates/admin/configuration/display-configuration-template.php:150
+msgid "Floating Chat Button"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:172
+msgid "Show a WhatsApp chat bubble in the corner of every page"
+msgstr ""
+
+#: includes/admin/setup-wizard.php:173
+msgid "Shoppers can ask a question before they buy."
+msgstr ""
+
+#: includes/admin/setup-wizard.php:204
+msgid "Please enter a valid WhatsApp number with the country code."
+msgstr ""
+
+#: includes/admin-dashboard.php:77
+msgid "Orders"
+msgstr ""
+
+#: includes/admin-dashboard.php:82
+msgid "Messages"
+msgstr ""
+
+#: includes/admin-dashboard.php:87
+msgid "Broadcast"
+msgstr ""
+
+#: includes/admin-dashboard.php:106
+msgid "Twilio"
+msgstr ""
+
+#: includes/admin-dashboard.php:111
+msgid "Chat Assistant"
+msgstr ""
+
+#: includes/admin-dashboard.php:116
+msgid "Notifications"
+msgstr ""
+
+#: includes/admin-dashboard.php:121
+msgid "Wallet"
+msgstr ""
+
+#: includes/admin-dashboard.php:149
+msgid "Turn every chat into a real WooCommerce order with Pro"
+msgstr ""
+
+#: includes/admin-dashboard.php:150
+msgid ""
+"In Free the customer sends you their cart and you finish the sale by hand. "
+"Pro connects your number through Twilio, so a chat assistant places the "
+"order for you while the customer is still in WhatsApp."
+msgstr ""
+
+#: includes/admin-dashboard.php:152
+msgid ""
+"The customer picks shipping and payment in the chat, and the order is "
+"created in WooCommerce on the spot"
+msgstr ""
+
+#: includes/admin-dashboard.php:153
+msgid ""
+"Cash on delivery, bank transfer and cheque confirmed in the chat, a secure "
+"payment link for cards"
+msgstr ""
+
+#: includes/admin-dashboard.php:154
+msgid "Stock, coupons, taxes and shipping rules applied exactly as at your checkout"
+msgstr ""
+
+#: includes/admin-dashboard.php:155
+msgid ""
+"A list of every WhatsApp order with revenue, status and the customer behind "
+"it"
+msgstr ""
+
+#: includes/admin-dashboard.php:168
+msgid "See every WhatsApp message and whether it arrived, with Pro"
+msgstr ""
+
+#: includes/admin-dashboard.php:169
+msgid ""
+"Pro keeps a log of every message your store sends and receives, with the "
+"delivery status WhatsApp reports back."
+msgstr ""
+
+#: includes/admin-dashboard.php:171
+msgid "Sent, delivered, read and failed, for every message"
+msgstr ""
+
+#: includes/admin-dashboard.php:172
+msgid "Plain language reasons for a failed message, so you know what to fix"
+msgstr ""
+
+#: includes/admin-dashboard.php:173
+msgid "Search, filter and export the log to CSV"
+msgstr ""
+
+#: includes/admin-dashboard.php:174
+msgid "Automatic clean up after the number of days you choose"
+msgstr ""
+
+#: includes/admin-dashboard.php:187
+msgid "Message your customers in bulk on WhatsApp with Pro"
+msgstr ""
+
+#: includes/admin-dashboard.php:188
+msgid ""
+"Announce a sale, a restock or a new arrival to the customers who want to "
+"hear it, straight to the app they read first."
+msgstr ""
+
+#: includes/admin-dashboard.php:190
+msgid ""
+"Send to all customers, recent buyers, buyers of a product, or hand picked "
+"people"
+msgstr ""
+
+#: includes/admin-dashboard.php:191
+msgid "Text, an image, or an approved WhatsApp template, with a live phone preview"
+msgstr ""
+
+#: includes/admin-dashboard.php:192
+msgid "Customers who opted out are skipped automatically"
+msgstr ""
+
+#: includes/admin-dashboard.php:193
+msgid "A delivery report when the broadcast is done"
+msgstr ""
+
+#: includes/admin-dashboard.php:206
+msgid "Send WhatsApp messages from your store with Pro"
+msgstr ""
+
+#: includes/admin-dashboard.php:207
+msgid ""
+"Free opens WhatsApp on the customer's phone. Pro connects your number to "
+"the official WhatsApp Business Platform through Twilio, so your store can "
+"message customers by itself."
+msgstr ""
+
+#: includes/admin-dashboard.php:209
+msgid "Connect with your Account SID and Auth Token, or a revocable API key"
+msgstr ""
+
+#: includes/admin-dashboard.php:210
+msgid "A one click connection test and a test message to your own phone"
+msgstr ""
+
+#: includes/admin-dashboard.php:211
+msgid "Every incoming message checked against Twilio's signature"
+msgstr ""
+
+#: includes/admin-dashboard.php:224
+msgid "Let a chat assistant take the order for you, with Pro"
+msgstr ""
+
+#: includes/admin-dashboard.php:225
+msgid ""
+"Pro answers the customer in WhatsApp, walks them through shipping and "
+"payment, and places the order without you typing a word."
+msgstr ""
+
+#: includes/admin-dashboard.php:227
+msgid "Choose which payment methods the chat offers"
+msgstr ""
+
+#: includes/admin-dashboard.php:228
+msgid ""
+"Customers reply STATUS for their latest order, HELP for options, AGENT for "
+"a person"
+msgstr ""
+
+#: includes/admin-dashboard.php:229
+msgid "Every reply worded your way"
+msgstr ""
+
+#: includes/admin-dashboard.php:230
+msgid "Unfinished requests expire on their own"
+msgstr ""
+
+#: includes/admin-dashboard.php:243
+msgid "Send order updates and win back lost sales on WhatsApp, with Pro"
+msgstr ""
+
+#: includes/admin-dashboard.php:244
+msgid ""
+"Customers read WhatsApp in minutes, not days. Pro keeps them in the loop "
+"automatically and nudges the ones who did not finish."
+msgstr ""
+
+#: includes/admin-dashboard.php:246
+msgid "Order confirmation and status updates, with your own wording per status"
+msgstr ""
+
+#: includes/admin-dashboard.php:247
+msgid "A new order alert on your own phone"
+msgstr ""
+
+#: includes/admin-dashboard.php:248
+msgid "Reminders for unfinished chats and unpaid orders, with a payment link"
+msgstr ""
+
+#: includes/admin-dashboard.php:249
+msgid "A WhatsApp opt in at checkout, and STOP and START handled for you"
+msgstr ""
+
+#: includes/admin-dashboard.php:250
+msgid "Approved WhatsApp templates, so updates arrive after the 24 hour window"
+msgstr ""
+
+#: includes/admin-dashboard.php:263
+msgid "Let customers pay from their store wallet in the chat, with Pro"
+msgstr ""
+
+#: includes/admin-dashboard.php:264
+msgid ""
+"Pro works with DevDiggers Wallet, so customers can check their balance and "
+"pay for an order without leaving WhatsApp."
+msgstr ""
+
+#: includes/admin-dashboard.php:266
+msgid "Customers reply WALLET to see their balance"
+msgstr ""
+
+#: includes/admin-dashboard.php:267
+msgid "Pay for the order from the wallet, right in the chat"
+msgstr ""
+
+#: includes/admin-dashboard.php:268
+msgid "A WhatsApp message whenever money is added to or taken from the wallet"
+msgstr ""
+
+#: includes/admin-dashboard.php:340
+#. translators: %s: star rating link.
+msgid ""
+"If Order via Chat for WooCommerce is working well for you, please leave us "
+"a %s rating. It really helps."
+msgstr ""
+
+#: includes/file-handler.php:56 includes/file-handler.php:120
+#: src/block/index.js:13
+msgid "Order on WhatsApp"
+msgstr ""
+
+#: includes/file-handler.php:133
+msgid "Send my order on WhatsApp"
+msgstr ""
+
+#: includes/file-handler.php:138
+msgid "Hi! I have a question about your store."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:43
+msgid "Your session expired. Please refresh the page and try again."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:47
+msgid "WhatsApp ordering is not available right now."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:71
+msgid "Please log in to order on WhatsApp."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:111
+msgid "This product could not be found."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:115
+#: includes/front/front-functions.php:347
+msgid "Please choose product options first."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:119
+msgid "Sorry, this product cannot be ordered on WhatsApp right now."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:124
+#. translators: %d: units in stock.
+msgid "Only %d left in stock. Please lower the quantity."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:149
+msgid "Your cart has no products that can be ordered on WhatsApp."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:201
+#. translators: 1: quantity, 2: unit price.
+msgid "%1$d x %2$s"
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:204
+#. translators: %d: quantity.
+msgid "Quantity: %d"
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:285
+#. translators: %s: field label.
+msgid "%s is required."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:290
+msgid "Please add the phone number you use on WhatsApp."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:294
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:300
+msgid ""
+"That phone number does not look right. Please include the full number you "
+"use on WhatsApp."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:318
+msgid "Use the number you have WhatsApp on. We continue your order there."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:325
+msgid "Close"
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:327
+msgid "Where should we deliver?"
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:328
+msgid "Add your details once and we will finish your order on WhatsApp."
+msgstr ""
+
+#: includes/front/front-ajax-functions.php:345
+msgid "Continue on WhatsApp"
+msgstr ""
+
+#: includes/front/front-functions.php:115
+msgid ""
+"This product is ordered on WhatsApp. Please use the WhatsApp button on the "
+"product page."
+msgstr ""
+
+#: includes/front/front-functions.php:274
+msgid "Chat with us on WhatsApp"
+msgstr ""
+
+#: includes/front/front-functions.php:346
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#: includes/front/front-functions.php:348
+msgid "Opening WhatsApp…"
+msgstr ""
+
+#: includes/global-functions.php:139 includes/global-functions.php:159
+#: includes/global-functions.php:174
+msgid "Do not show"
+msgstr ""
+
+#: includes/global-functions.php:140
+msgid "Default (end of the summary)"
+msgstr ""
+
+#: includes/global-functions.php:141
+msgid "After Product Image"
+msgstr ""
+
+#: includes/global-functions.php:142
+msgid "After Product Title"
+msgstr ""
+
+#: includes/global-functions.php:143
+msgid "Before Product Title"
+msgstr ""
+
+#: includes/global-functions.php:144
+msgid "After Short Description"
+msgstr ""
+
+#: includes/global-functions.php:145 includes/global-functions.php:161
+msgid "After Add To Cart Button"
+msgstr ""
+
+#: includes/global-functions.php:146
+msgid "Before Tab Information"
+msgstr ""
+
+#: includes/global-functions.php:160
+msgid "Before Add To Cart Button"
+msgstr ""
+
+#: includes/global-functions.php:175
+msgid "Before Proceed To Checkout Button"
+msgstr ""
+
+#: includes/global-functions.php:176
+msgid "After Proceed To Checkout Button"
+msgstr ""
+
+#: includes/global-functions.php:281
+#. translators: %s: shipping method.
+msgid "*Shipping:* %s"
+msgstr ""
+
+#: includes/global-functions.php:286
+#. translators: %s: discount amount.
+msgid "*Discount:* %s"
+msgstr ""
+
+#: includes/global-functions.php:292
+#. translators: 1: tax label, 2: tax amount.
+msgid "*%1$s:* %2$s"
+msgstr ""
+
+#: includes/global-functions.php:297
+#. translators: %s: payment method title.
+msgid "*Payment:* %s"
+msgstr ""
+
+#: includes/global-functions.php:301
+#. translators: %s: order total.
+msgid "*Total:* %s"
+msgstr ""
+
+#: includes/global-functions.php:334
+#. translators: Keep the {placeholders} as they are.
+msgid ""
+"Hello! I just placed order #{order_number} on {site_name}.\n"
+"\n"
+"{order_summary}\n"
+"\n"
+"*Name:* {customer_name}"
+msgstr ""
+
+#: includes/global-functions.php:338
+#. translators: Keep the {placeholders} as they are.
+msgid ""
+"Hello! I would like to order:\n"
+"\n"
+"{items}\n"
+"\n"
+"*Estimated subtotal:* {subtotal}\n"
+"*Name:* {customer_name}\n"
+"*Deliver to:* {address}"
+msgstr ""
+
+#: includes/global-functions.php:381
+#. translators: %s: list of tags.
+msgid "Available tags: %s. Wrap words in *stars* for bold."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:29
+msgid "Button Placement"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:30
+msgid "Choose the pages where customers see the WhatsApp button."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:53
+msgid "Shop and Category Pages"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:54
+msgid ""
+"Shown on simple products only, because variable products need options "
+"picked on the product page first."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:62
+msgid "Anywhere Else"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:63
+msgid ""
+"Add the <strong>Order on WhatsApp</strong> block in the editor, or use the "
+"shortcode <code>[ddwcpvw_button]</code> in any page builder. Pass "
+"<code>id=\"123\"</code> for a specific product or "
+"<code>type=\"cart\"</code> to send the whole cart."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:69
+msgid "Button Style"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:70
+msgid ""
+"Match the button to your theme. The preview updates as you change the "
+"settings."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:75
+msgid "Preview"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:80
+#: templates/admin/configuration/general-configuration-template.php:183
+msgid "Button Text"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:81
+msgid "Short and clear works best, for example \"Order on WhatsApp\"."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:88
+msgid "WhatsApp Icon"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:89
+msgid "Show the WhatsApp logo before the text"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:90
+msgid "The familiar logo tells shoppers at a glance what the button does."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:97
+msgid "Background Color"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:98
+msgid ""
+"WhatsApp green is #25D366 if you want the button to feel instantly "
+"recognisable."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:105
+msgid "Text Color"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:106
+msgid ""
+"Pick a color with strong contrast against the background so the text stays "
+"easy to read."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:113
+msgid "Corner Roundness"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:114
+msgid "In pixels. Use 0 for square corners or 50 for a pill shape."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:126
+msgid "Full Width"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:127
+msgid "Stretch the button across the product summary"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:128
+msgid ""
+"A bigger tap target that stands out on phones. The cart page button is "
+"always full width."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:135
+msgid "Devices"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:136
+msgid ""
+"Most WhatsApp orders come from phones. Choose \"Phones and tablets only\" "
+"to keep the desktop layout unchanged."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:141
+msgid "All devices"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:142
+msgid "Phones and tablets only"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:143
+msgid "Desktop only"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:151
+msgid ""
+"A round WhatsApp bubble in the corner of every page, so shoppers can ask a "
+"question before they buy. Questions answered quickly turn into orders."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:156
+msgid "Chat Bubble"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:157
+msgid "Show a floating WhatsApp chat button"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:158
+msgid ""
+"It opens a normal WhatsApp chat with your team. It uses the button colors "
+"above, so it always matches."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:165
+msgid "Chat Number"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:166
+msgid ""
+"Where questions go. Leave empty to use your WhatsApp number from the "
+"General tab, or add the number your support team uses."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:174
+msgid "Prefilled Message"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:175
+msgid ""
+"Already typed in when the chat opens, so the shopper only taps send. On a "
+"product page the product name and link are added for you."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:182
+msgid "Bubble Text"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:183
+msgid ""
+"Optional. A short line next to the icon, like \"Need help? Chat with us\". "
+"Leave empty for an icon only bubble."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:190
+msgid "Position"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:191
+msgid ""
+"Pick the corner that does not clash with your theme, a cookie banner or a "
+"live chat widget."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:196
+msgid "Bottom right"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:197
+msgid "Bottom left"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:202
+msgid "Show On"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:203
+msgid "Every page, or only the shop, product, cart and checkout pages."
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:208
+msgid "All pages"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:209
+msgid "Store pages only"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:214
+msgid "Phones"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:215
+msgid "Hide the bubble on small screens"
+msgstr ""
+
+#: templates/admin/configuration/display-configuration-template.php:216
+msgid "Handy if your mobile theme already has a sticky bar at the bottom."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:29
+msgid "Plugin Status"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:30
+msgid "Switch WhatsApp ordering on or off for your whole store."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:36
+msgid "Enable Order via Chat for WooCommerce"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:37
+msgid ""
+"When this is off, the WhatsApp buttons disappear from your store. Your "
+"settings stay exactly as they are."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:45
+msgid ""
+"Where order requests are sent, with the country code. It can be your "
+"personal WhatsApp or a WhatsApp Business app number. The buttons stay "
+"hidden until this is filled in."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:55
+msgid "Who Can Order"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:56
+msgid "Decide which products and customers can use WhatsApp ordering."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:63
+msgid ""
+"Guests fill in their delivery details in a short popup before WhatsApp "
+"opens. Turn this off to ask them to log in first."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:70
+msgid "Out of Stock Products"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:71
+msgid "Hide the button when a product is out of stock"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:72
+msgid "Saves customers from starting a chat for something you cannot send them."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:79
+msgid "Excluded Products"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:80
+msgid ""
+"These products keep their normal checkout only. Handy for items that need a "
+"custom quote or special handling."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:90
+msgid "Excluded Categories"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:91
+msgid "Every product in these categories keeps its normal checkout only."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:103
+msgid "Catalog Mode"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:104
+msgid ""
+"Take orders on WhatsApp only. Products you excluded above keep their normal "
+"checkout."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:109
+msgid "WhatsApp Only"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:110
+msgid "Replace Add to Cart with the WhatsApp button"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:111
+msgid ""
+"Customers still pick options and quantity on the product page, then send "
+"the order on WhatsApp. Adding these products to the cart is blocked."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:118
+msgid "Prices"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:119
+msgid "Hide prices and quote them in the chat"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:120
+msgid ""
+"For wholesale, custom or \"ask for price\" products. Prices are left out of "
+"the WhatsApp message too."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:129
+msgid "WhatsApp Messages"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:130
+msgid ""
+"The text customers send you. Lines whose tag is empty are left out on their "
+"own."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:135
+msgid "Order Request"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:146
+#: templates/admin/configuration/general-configuration-template.php:168
+msgid "Order Received Page"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:157
+msgid "Analytics Events"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:158
+msgid "Report WhatsApp orders to Google Analytics, Tag Manager and Meta Pixel"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:159
+msgid ""
+"Sends a generate_lead event (and a Pixel Contact event) when a customer "
+"opens WhatsApp with an order. Uses the tracking code already on your site; "
+"nothing is sent when there is none."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:169
+msgid ""
+"For customers who check out the normal way. They can send you the finished "
+"order on WhatsApp in one tap."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:174
+msgid "Send Order Button"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:175
+msgid "Show a WhatsApp button on the order received page"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:176
+msgid ""
+"The message holds the order number, items, shipping, payment method and "
+"total, so you can confirm it in the chat."
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:65
+#. translators: %s: admin display name.
+msgid "Welcome back, %s! 👋🏻"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:66
+msgid ""
+"How many customers are sending you orders on WhatsApp, and what they ask "
+"for."
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:70
+#: templates/admin/dashboard/dashboard-template.php:122
+msgid "Order Requests"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:77
+#: templates/admin/dashboard/dashboard-template.php:102
+msgid "Requested Value"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:85
+msgid "Units Requested"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:92
+msgid "Whole Cart Requests"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:111
+msgid "Value"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:116
+msgid "No order requests yet"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:117
+msgid ""
+"Each time a customer sends you a product or cart on WhatsApp, its value "
+"shows up here."
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:130
+msgid "Requests"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:135
+msgid "No requests in this period"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:136
+msgid "Try a wider date range, or tap the WhatsApp button on one of your products."
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:142
+msgid "Finish Setting Up"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:146
+msgid "Most Requested Products"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:167
+msgid "Count real orders and revenue, not just requests"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:168
+msgid ""
+"With Pro the chat places the order itself, so this dashboard shows what "
+"WhatsApp actually sold."
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:170
+msgid "WhatsApp orders and revenue, day by day"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:171
+msgid "Messages sent and the share that were delivered"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:172
+msgid "Failed messages with the reason, so nothing slips by"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:195
+#. translators: 1: completed steps, 2: total steps.
+msgid "%1$d of %2$d steps done"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:223
+msgid "No products requested yet"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:224
+msgid "The products customers ask for most on WhatsApp will be listed here."
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:240
+#. translators: %d: number of units requested.
+msgid "%d unit requested"
+msgid_plural "%d units requested"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/admin/dashboard/dashboard-template.php:247
+#. translators: %d: number of requests.
+msgid "%d request"
+msgid_plural "%d requests"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Let customers send their product or whole cart to your WhatsApp in one tap, "
+"with delivery details, a floating chat button and order request analytics."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "DevDiggers"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://devdiggers.com/"
+msgstr ""
+
+#: src/block/index.js:14
+msgid "A button that sends a product or the cart to your WhatsApp."
+msgstr ""
+
+#: src/block/index.js:27
+msgid "Settings"
+msgstr ""
+
+#: src/block/index.js:29
+msgid "Send"
+msgstr ""
+
+#: src/block/index.js:32
+msgid "A product"
+msgstr ""
+
+#: src/block/index.js:33
+msgid "The whole cart"
+msgstr ""
+
+#: src/block/index.js:38
+msgid "Product ID"
+msgstr ""
+
+#: src/block/index.js:39
+msgid "Leave empty to use the product of the current page."
+msgstr ""
+
+#: src/block/index.js:49
+msgid ""
+"The WhatsApp button shows here when this product can be ordered on WhatsApp "
+"and the plugin has a number set."
+msgstr ""
+
