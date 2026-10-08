@@ -2,7 +2,7 @@
 /**
  * Front AJAX callbacks: turn the customer's product or cart into a WhatsApp purchase request.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  * @version 1.0.0
  */
 
@@ -40,11 +40,11 @@ if ( ! class_exists( 'DDWCPVW_Front_Ajax_Functions' ) ) {
 		 */
 		public function ddwcpvw_prepare_whatsapp_url() {
 			if ( ! check_ajax_referer( 'ddwcpvw-nonce', 'nonce', false ) ) {
-				wp_send_json_error( [ 'message' => esc_html__( 'Your session expired. Please refresh the page and try again.', 'order-via-chat-for-woocommerce' ) ], 403 );
+				wp_send_json_error( [ 'message' => esc_html__( 'Your session expired. Please refresh the page and try again.', 'devdiggers-order-via-chat-for-woocommerce' ) ], 403 );
 			}
 
 			if ( 'yes' !== $this->ddwcpvw_configuration['enabled'] || empty( $this->ddwcpvw_configuration['whatsapp_number'] ) ) {
-				wp_send_json_error( [ 'message' => esc_html__( 'WhatsApp ordering is not available right now.', 'order-via-chat-for-woocommerce' ) ] );
+				wp_send_json_error( [ 'message' => esc_html__( 'WhatsApp ordering is not available right now.', 'devdiggers-order-via-chat-for-woocommerce' ) ] );
 			}
 
 			// phpcs:disable WordPress.Security.NonceVerification.Missing -- Verified above.
@@ -68,7 +68,7 @@ if ( ! class_exists( 'DDWCPVW_Front_Ajax_Functions' ) ) {
 			if ( ! $user_id && ! $guest && 'yes' !== $this->ddwcpvw_configuration['allow_guests'] ) {
 				wp_send_json_error(
 					[
-						'message'  => esc_html__( 'Please log in to order on WhatsApp.', 'order-via-chat-for-woocommerce' ),
+						'message'  => esc_html__( 'Please log in to order on WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'redirect' => wc_get_page_permalink( 'myaccount' ),
 					]
 				);
@@ -108,20 +108,20 @@ if ( ! class_exists( 'DDWCPVW_Front_Ajax_Functions' ) ) {
 			$product = wc_get_product( $product_id );
 
 			if ( ! $product ) {
-				return new \WP_Error( 'ddwcpvw_no_product', esc_html__( 'This product could not be found.', 'order-via-chat-for-woocommerce' ) );
+				return new \WP_Error( 'ddwcpvw_no_product', esc_html__( 'This product could not be found.', 'devdiggers-order-via-chat-for-woocommerce' ) );
 			}
 
 			if ( $product->is_type( 'variable' ) ) {
-				return new \WP_Error( 'ddwcpvw_choose_options', esc_html__( 'Please choose product options first.', 'order-via-chat-for-woocommerce' ) );
+				return new \WP_Error( 'ddwcpvw_choose_options', esc_html__( 'Please choose product options first.', 'devdiggers-order-via-chat-for-woocommerce' ) );
 			}
 
 			if ( ! ddwcpvw_is_product_available( $product, $this->ddwcpvw_configuration ) || ! $product->is_in_stock() ) {
-				return new \WP_Error( 'ddwcpvw_unavailable', esc_html__( 'Sorry, this product cannot be ordered on WhatsApp right now.', 'order-via-chat-for-woocommerce' ) );
+				return new \WP_Error( 'ddwcpvw_unavailable', esc_html__( 'Sorry, this product cannot be ordered on WhatsApp right now.', 'devdiggers-order-via-chat-for-woocommerce' ) );
 			}
 
 			if ( ! $product->has_enough_stock( $quantity ) ) {
 				/* translators: %d: units in stock. */
-				return new \WP_Error( 'ddwcpvw_stock', sprintf( esc_html__( 'Only %d left in stock. Please lower the quantity.', 'order-via-chat-for-woocommerce' ), $product->get_stock_quantity() ) );
+				return new \WP_Error( 'ddwcpvw_stock', sprintf( esc_html__( 'Only %d left in stock. Please lower the quantity.', 'devdiggers-order-via-chat-for-woocommerce' ), $product->get_stock_quantity() ) );
 			}
 
 			return [ $this->ddwcpvw_make_item( $product, $quantity, $attributes ) ];
@@ -146,7 +146,7 @@ if ( ! class_exists( 'DDWCPVW_Front_Ajax_Functions' ) ) {
 			}
 
 			if ( ! $items ) {
-				return new \WP_Error( 'ddwcpvw_empty_cart', esc_html__( 'Your cart has no products that can be ordered on WhatsApp.', 'order-via-chat-for-woocommerce' ) );
+				return new \WP_Error( 'ddwcpvw_empty_cart', esc_html__( 'Your cart has no products that can be ordered on WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' ) );
 			}
 
 			return $items;
@@ -198,10 +198,10 @@ if ( ! class_exists( 'DDWCPVW_Front_Ajax_Functions' ) ) {
 
 				if ( $show_price ) {
 					/* translators: 1: quantity, 2: unit price. */
-					$line .= "\n" . sprintf( esc_html__( '%1$d x %2$s', 'order-via-chat-for-woocommerce' ), $quantity, ddwcpvw_format_price( (float) wc_get_price_to_display( $product ) ) );
+					$line .= "\n" . sprintf( esc_html__( '%1$d x %2$s', 'devdiggers-order-via-chat-for-woocommerce' ), $quantity, ddwcpvw_format_price( (float) wc_get_price_to_display( $product ) ) );
 				} else {
 					/* translators: %d: quantity. */
-					$line .= "\n" . sprintf( esc_html__( 'Quantity: %d', 'order-via-chat-for-woocommerce' ), $quantity );
+					$line .= "\n" . sprintf( esc_html__( 'Quantity: %d', 'devdiggers-order-via-chat-for-woocommerce' ), $quantity );
 				}
 
 				$lines[] = $line . "\n" . $product->get_permalink();
@@ -282,22 +282,22 @@ if ( ! class_exists( 'DDWCPVW_Front_Ajax_Functions' ) ) {
 			foreach ( $address['billing'] as $key => $value ) {
 				if ( ! empty( $fields[ 'billing_' . $key ]['required'] ) && '' === (string) $value ) {
 					/* translators: %s: field label. */
-					return sprintf( esc_html__( '%s is required.', 'order-via-chat-for-woocommerce' ), wp_strip_all_tags( $fields[ 'billing_' . $key ]['label'] ) );
+					return sprintf( esc_html__( '%s is required.', 'devdiggers-order-via-chat-for-woocommerce' ), wp_strip_all_tags( $fields[ 'billing_' . $key ]['label'] ) );
 				}
 			}
 
 			if ( empty( $address['billing']['phone'] ) ) {
-				return esc_html__( 'Please add the phone number you use on WhatsApp.', 'order-via-chat-for-woocommerce' );
+				return esc_html__( 'Please add the phone number you use on WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' );
 			}
 
 			if ( ! empty( $address['billing']['email'] ) && ! is_email( $address['billing']['email'] ) ) {
-				return esc_html__( 'Please enter a valid email address.', 'order-via-chat-for-woocommerce' );
+				return esc_html__( 'Please enter a valid email address.', 'devdiggers-order-via-chat-for-woocommerce' );
 			}
 
 			$digits = preg_replace( '/\D+/', '', ddwcpvw_normalize_phone( $address['billing']['phone'], $address['billing']['country'] ) );
 
 			if ( strlen( $digits ) < 8 || strlen( $digits ) > 15 ) {
-				return esc_html__( 'That phone number does not look right. Please include the full number you use on WhatsApp.', 'order-via-chat-for-woocommerce' );
+				return esc_html__( 'That phone number does not look right. Please include the full number you use on WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' );
 			}
 
 			return '';
@@ -315,17 +315,17 @@ if ( ! class_exists( 'DDWCPVW_Front_Ajax_Functions' ) ) {
 
 			if ( isset( $fields['billing_phone'] ) ) {
 				$fields['billing_phone']['required']    = true;
-				$fields['billing_phone']['description'] = esc_html__( 'Use the number you have WhatsApp on. We continue your order there.', 'order-via-chat-for-woocommerce' );
+				$fields['billing_phone']['description'] = esc_html__( 'Use the number you have WhatsApp on. We continue your order there.', 'devdiggers-order-via-chat-for-woocommerce' );
 			}
 
 			ob_start();
 			?>
 			<div class="ddwcpvw-popup" role="dialog" aria-modal="true" aria-labelledby="ddwcpvw-popup-title">
 				<div class="ddwcpvw-popup-content">
-					<button type="button" class="ddwcpvw-close-popup" aria-label="<?php esc_attr_e( 'Close', 'order-via-chat-for-woocommerce' ); ?>">&times;</button>
+					<button type="button" class="ddwcpvw-close-popup" aria-label="<?php esc_attr_e( 'Close', 'devdiggers-order-via-chat-for-woocommerce' ); ?>">&times;</button>
 					<form method="post" id="ddwcpvw-guest-address-form" class="woocommerce">
-						<h3 id="ddwcpvw-popup-title"><?php esc_html_e( 'Where should we deliver?', 'order-via-chat-for-woocommerce' ); ?></h3>
-						<p class="ddwcpvw-popup-intro"><?php esc_html_e( 'Add your details once and we will finish your order on WhatsApp.', 'order-via-chat-for-woocommerce' ); ?></p>
+						<h3 id="ddwcpvw-popup-title"><?php esc_html_e( 'Where should we deliver?', 'devdiggers-order-via-chat-for-woocommerce' ); ?></h3>
+						<p class="ddwcpvw-popup-intro"><?php esc_html_e( 'Add your details once and we will finish your order on WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' ); ?></p>
 						<?php if ( $error ) : ?>
 							<p class="ddwcpvw-popup-error"><?php echo esc_html( $error ); ?></p>
 						<?php endif; ?>
@@ -342,7 +342,7 @@ if ( ! class_exists( 'DDWCPVW_Front_Ajax_Functions' ) ) {
 						<button type="submit" class="button alt ddwcpvw-popup-submit">
 							<?php
 							echo ddwcpvw_get_whatsapp_icon(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static SVG markup.
-							esc_html_e( 'Continue on WhatsApp', 'order-via-chat-for-woocommerce' );
+							esc_html_e( 'Continue on WhatsApp', 'devdiggers-order-via-chat-for-woocommerce' );
 							?>
 						</button>
 					</form>

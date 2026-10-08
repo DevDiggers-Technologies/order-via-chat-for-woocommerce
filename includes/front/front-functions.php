@@ -2,7 +2,7 @@
 /**
  * Frontend callbacks.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  * @version 1.0.0
  */
 
@@ -112,7 +112,7 @@ if ( ! class_exists( 'DDWCPVW_Front_Functions' ) ) {
 		 */
 		public function ddwcpvw_block_add_to_cart( $passed, $product_id ) {
 			if ( $passed && ddwcpvw_is_product_available( wc_get_product( $product_id ), $this->ddwcpvw_configuration ) ) {
-				wc_add_notice( esc_html__( 'This product is ordered on WhatsApp. Please use the WhatsApp button on the product page.', 'order-via-chat-for-woocommerce' ), 'error' );
+				wc_add_notice( esc_html__( 'This product is ordered on WhatsApp. Please use the WhatsApp button on the product page.', 'devdiggers-order-via-chat-for-woocommerce' ), 'error' );
 				return false;
 			}
 
@@ -271,7 +271,7 @@ if ( ! class_exists( 'DDWCPVW_Front_Functions' ) ) {
 
 			$url = ddwcpvw_get_whatsapp_url( $number, apply_filters( 'ddwcpvw_floating_message', $message ) );
 			?>
-			<a class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" href="<?php echo esc_attr( $url ); // esc_url() strips the %0A line breaks; the URL is https://wa.me/ plus digits and rawurlencode() output. ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr( $label ? $label : __( 'Chat with us on WhatsApp', 'order-via-chat-for-woocommerce' ) ); ?>">
+			<a class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" href="<?php echo esc_attr( $url ); // esc_url() strips the %0A line breaks; the URL is https://wa.me/ plus digits and rawurlencode() output. ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr( $label ? $label : __( 'Chat with us on WhatsApp', 'devdiggers-order-via-chat-for-woocommerce' ) ); ?>">
 				<span class="ddwcpvw-floating-icon"><?php echo ddwcpvw_get_whatsapp_icon( 28 ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Static SVG markup. ?></span>
 				<?php if ( $label ) : ?>
 					<span class="ddwcpvw-floating-label"><?php echo esc_html( $label ); ?></span>
@@ -343,9 +343,9 @@ if ( ! class_exists( 'DDWCPVW_Front_Functions' ) ) {
 					],
 					'tracking' => 'yes' === $this->ddwcpvw_configuration['tracking'],
 					'i18n'     => [
-						'error'         => esc_html__( 'Something went wrong. Please try again.', 'order-via-chat-for-woocommerce' ),
-						'chooseOptions' => esc_html__( 'Please choose product options first.', 'order-via-chat-for-woocommerce' ),
-						'opening'       => esc_html__( 'Opening WhatsApp…', 'order-via-chat-for-woocommerce' ),
+						'error'         => esc_html__( 'Something went wrong. Please try again.', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'chooseOptions' => esc_html__( 'Please choose product options first.', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'opening'       => esc_html__( 'Opening WhatsApp…', 'devdiggers-order-via-chat-for-woocommerce' ),
 					],
 				]
 			);

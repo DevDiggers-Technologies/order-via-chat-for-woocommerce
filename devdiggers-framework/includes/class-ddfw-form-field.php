@@ -98,7 +98,7 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 
 			if ( $args['required'] ) {
 				$args['class'][] = 'validate-required';
-				$required        = '&nbsp;<abbr class="required" title="' . esc_attr__( 'required', 'order-via-chat-for-woocommerce' ) . '">*</abbr>';
+				$required        = '&nbsp;<abbr class="required" title="' . esc_attr__( 'required', 'devdiggers-order-via-chat-for-woocommerce' ) . '">*</abbr>';
 			} else {
 				$required = '';
 			}
@@ -172,15 +172,15 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 					} else {
 						$data_label = ! empty( $args['label'] ) ? 'data-label="' . esc_attr( $args['label'] ) . '"' : '';
 						?>
-						<select id="billing_country" name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>" class="country_to_state country_select <?php echo esc_attr( $default_input_class ); ?> <?php echo esc_attr( implode( ' ', $args['input_class'] ) ); ?>" <?php echo wp_kses_data( implode( ' ', $custom_attributes ) ); ?> data-placeholder="<?php echo esc_attr( $args['placeholder'] ? $args['placeholder'] : esc_attr__( 'Select a country / region&hellip;', 'order-via-chat-for-woocommerce' ) ); ?>" <?php echo wp_kses_post( $data_label ); ?>>
-							<option value=""><?php esc_html_e( 'Select a country / region&hellip;', 'order-via-chat-for-woocommerce' ); ?></option>
+						<select id="billing_country" name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>" class="country_to_state country_select <?php echo esc_attr( $default_input_class ); ?> <?php echo esc_attr( implode( ' ', $args['input_class'] ) ); ?>" <?php echo wp_kses_data( implode( ' ', $custom_attributes ) ); ?> data-placeholder="<?php echo esc_attr( $args['placeholder'] ? $args['placeholder'] : esc_attr__( 'Select a country / region&hellip;', 'devdiggers-order-via-chat-for-woocommerce' ) ); ?>" <?php echo wp_kses_post( $data_label ); ?>>
+							<option value=""><?php esc_html_e( 'Select a country / region&hellip;', 'devdiggers-order-via-chat-for-woocommerce' ); ?></option>
 							<?php foreach ( $countries as $ckey => $cvalue ) : ?>
 								<option value="<?php echo esc_attr( $ckey ); ?>" <?php selected( $value, $ckey ); ?>><?php echo esc_html( $cvalue ); ?></option>
 							<?php endforeach; ?>
 						</select>
 						<noscript>
-							<button type="submit" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update country / region', 'order-via-chat-for-woocommerce' ); ?>">
-								<?php esc_html_e( 'Update country / region', 'order-via-chat-for-woocommerce' ); ?>
+							<button type="submit" name="woocommerce_checkout_update_totals" value="<?php esc_attr_e( 'Update country / region', 'devdiggers-order-via-chat-for-woocommerce' ); ?>">
+								<?php esc_html_e( 'Update country / region', 'devdiggers-order-via-chat-for-woocommerce' ); ?>
 							</button>
 						</noscript>
 						<?php
@@ -253,7 +253,7 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 							foreach ( $args['options'] as $option_key => $option_text ) {
 								if ( '' === $option_key ) {
 									if ( empty( $args['placeholder'] ) ) {
-										$args['placeholder'] = $option_text ? $option_text : esc_html__( 'Choose an option', 'order-via-chat-for-woocommerce' );
+										$args['placeholder'] = $option_text ? $option_text : esc_html__( 'Choose an option', 'devdiggers-order-via-chat-for-woocommerce' );
 									}
 									$custom_attributes[] = 'data-allow_clear="true"';
 								}
@@ -331,22 +331,22 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 								<div class="ddfw-image-preview-wrapper">
 									<img src="<?php echo esc_url( $image_url ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>-preview" />
 									<div class="ddfw-image-actions">
-										<span class="ddfw-upload-image-button" data-id="<?php echo esc_attr( $args['id'] ); ?>" title="<?php esc_attr_e( 'Replace Image', 'order-via-chat-for-woocommerce' ); ?>">
+										<span class="ddfw-upload-image-button" data-id="<?php echo esc_attr( $args['id'] ); ?>" title="<?php esc_attr_e( 'Replace Image', 'devdiggers-order-via-chat-for-woocommerce' ); ?>">
 											<span class="dashicons dashicons-edit"></span>
 										</span>
-										<span class="ddfw-remove-image-button <?php echo esc_attr( $args['default_image'] && ! $value ? 'ddfw-hide' : '' ); ?>" data-id="<?php echo esc_attr( $args['id'] ); ?>" title="<?php esc_attr_e( 'Remove Image', 'order-via-chat-for-woocommerce' ); ?>">
+										<span class="ddfw-remove-image-button <?php echo esc_attr( $args['default_image'] && ! $value ? 'ddfw-hide' : '' ); ?>" data-id="<?php echo esc_attr( $args['id'] ); ?>" title="<?php esc_attr_e( 'Remove Image', 'devdiggers-order-via-chat-for-woocommerce' ); ?>">
 											<span class="dashicons dashicons-trash"></span>
 										</span>
 									</div>
 								</div>
-								<p><?php esc_html_e( 'Hover on the image to replace or remove', 'order-via-chat-for-woocommerce' ); ?></p>
+								<p><?php esc_html_e( 'Hover on the image to replace or remove', 'devdiggers-order-via-chat-for-woocommerce' ); ?></p>
 							</div>
 							<div class="ddfw-image-upload-wrapper <?php echo esc_attr( $value || $args['default_image'] ? 'ddfw-hide' : '' ); ?>">
 								<div class="ddfw-upload-icon-wrapper">
 									<?php DDFW_SVG::get_svg_icon( 'upload', false ); ?>
 								</div>
-								<h3><?php esc_html_e( 'Upload Image', 'order-via-chat-for-woocommerce' ); ?></h3>
-								<p><?php esc_html_e( 'Click the upload button to select an image from your media library or upload a new one.', 'order-via-chat-for-woocommerce' ); ?></p>
+								<h3><?php esc_html_e( 'Upload Image', 'devdiggers-order-via-chat-for-woocommerce' ); ?></h3>
+								<p><?php esc_html_e( 'Click the upload button to select an image from your media library or upload a new one.', 'devdiggers-order-via-chat-for-woocommerce' ); ?></p>
 								<input type="hidden" name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>" value="<?php echo esc_attr( $value ); ?>" />
 								<input type="hidden" id="<?php echo esc_attr( $args['id'] ); ?>-default-image" value="<?php echo esc_attr( $args['default_image'] ? $args['default_image'] : '' ); ?>" />
 								<button type="button" class="button ddfw-upload-image-button" data-id="<?php echo esc_attr( $args['id'] ); ?>" <?php echo wp_kses_data( implode( ' ', $custom_attributes ) ); ?>>
@@ -356,7 +356,7 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 										false,
 										[ 'size' => 15 ]
 									);
-									esc_html_e( 'Choose Image', 'order-via-chat-for-woocommerce' );
+									esc_html_e( 'Choose Image', 'devdiggers-order-via-chat-for-woocommerce' );
 									?>
 								</button>
 							</div>
@@ -377,7 +377,7 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 				case 'products':
 					ob_start();
 					?>
-					<select name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>" class="<?php echo esc_attr( $default_input_class ); ?> ddfw-products" <?php echo wp_kses_data( implode( ' ', $custom_attributes ) ); ?> data-placeholder="<?php esc_attr_e( 'Search by name', 'order-via-chat-for-woocommerce' ); ?>">
+					<select name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>" class="<?php echo esc_attr( $default_input_class ); ?> ddfw-products" <?php echo wp_kses_data( implode( ' ', $custom_attributes ) ); ?> data-placeholder="<?php esc_attr_e( 'Search by name', 'devdiggers-order-via-chat-for-woocommerce' ); ?>">
 						<?php
 						if ( ! empty( $value ) ) {
 							if ( is_array( $value ) ) {
@@ -407,7 +407,7 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 				case 'categories':
 					ob_start();
 					?>
-					<select name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>" class="<?php echo esc_attr( $default_input_class ); ?> ddfw-categories" <?php echo wp_kses_data( implode( ' ', $custom_attributes ) ); ?> data-placeholder="<?php esc_attr_e( 'Search by name', 'order-via-chat-for-woocommerce' ); ?>">
+					<select name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>" class="<?php echo esc_attr( $default_input_class ); ?> ddfw-categories" <?php echo wp_kses_data( implode( ' ', $custom_attributes ) ); ?> data-placeholder="<?php esc_attr_e( 'Search by name', 'devdiggers-order-via-chat-for-woocommerce' ); ?>">
 						<?php
 						if ( ! empty( $value ) ) {
 							if ( is_array( $value ) ) {
@@ -436,7 +436,7 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 				case 'users':
 					ob_start();
 					?>
-					<select name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>" class="<?php echo esc_attr( $default_input_class ); ?> ddfw-users" <?php echo wp_kses_data( implode( ' ', $custom_attributes ) ); ?> data-placeholder="<?php esc_attr_e( 'Search Users', 'order-via-chat-for-woocommerce' ); ?>">
+					<select name="<?php echo esc_attr( $name ); ?>" id="<?php echo esc_attr( $args['id'] ); ?>" class="<?php echo esc_attr( $default_input_class ); ?> ddfw-users" <?php echo wp_kses_data( implode( ' ', $custom_attributes ) ); ?> data-placeholder="<?php esc_attr_e( 'Search Users', 'devdiggers-order-via-chat-for-woocommerce' ); ?>">
 						<?php
 						if ( ! empty( $value ) ) {
 							if ( is_array( $value ) ) {
@@ -506,7 +506,7 @@ if ( ! class_exists( 'DDFW_Form_Field' ) ) {
 						class="regular-text"
 						name="<?php echo esc_attr( $args['name'] ); ?>"
 						multiple
-						data-placeholder="<?php esc_attr_e( 'Search by role', 'order-via-chat-for-woocommerce' ); ?>"
+						data-placeholder="<?php esc_attr_e( 'Search by role', 'devdiggers-order-via-chat-for-woocommerce' ); ?>"
 					>
 						<?php
 						if ( ! empty( $all_roles ) ) {

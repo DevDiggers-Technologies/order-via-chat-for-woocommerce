@@ -2,7 +2,7 @@
 /**
  * This file handles all admin dashboard functionalities.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  * @version 1.0.0
  */
 
@@ -57,68 +57,68 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		public function ddwcpvw_add_dashboard_menu() {
 			ob_start();
 			echo wp_kses( ddwcpvw_get_brand_mark(), ddfw_kses_allowed_svg_tags() );
-			esc_html_e( 'Order via Chat', 'order-via-chat-for-woocommerce' );
+			esc_html_e( 'Order via Chat', 'devdiggers-order-via-chat-for-woocommerce' );
 			$plugin_name = ob_get_clean();
 
 			$this->dashboard = new DDFW_Plugin_Dashboard(
 				[
-					'page_title'              => esc_html__( 'Order via Chat', 'order-via-chat-for-woocommerce' ),
-					'menu_title'              => esc_html__( 'Order via Chat', 'order-via-chat-for-woocommerce' ),
+					'page_title'              => esc_html__( 'Order via Chat', 'devdiggers-order-via-chat-for-woocommerce' ),
+					'menu_title'              => esc_html__( 'Order via Chat', 'devdiggers-order-via-chat-for-woocommerce' ),
 					'slug'                    => 'ddwcpvw-dashboard',
 					'plugin_name'             => $plugin_name,
 					'upgrade_url'             => 'https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/',
 					'menus'                   => [
 						'dashboard'     => [
-							'label'    => esc_html__( 'Dashboard', 'order-via-chat-for-woocommerce' ),
+							'label'    => esc_html__( 'Dashboard', 'devdiggers-order-via-chat-for-woocommerce' ),
 							'layout'   => 'full-width',
 							'callback' => [ $this, 'ddwcpvw_get_dashboard_template' ],
 						],
 						'orders'        => [
-							'label'    => esc_html__( 'Orders', 'order-via-chat-for-woocommerce' ),
+							'label'    => esc_html__( 'Orders', 'devdiggers-order-via-chat-for-woocommerce' ),
 							'layout'   => 'full-width',
 							'callback' => [ $this, 'ddwcpvw_get_orders_template' ],
 						],
 						'messages'      => [
-							'label'    => esc_html__( 'Messages', 'order-via-chat-for-woocommerce' ),
+							'label'    => esc_html__( 'Messages', 'devdiggers-order-via-chat-for-woocommerce' ),
 							'layout'   => 'full-width',
 							'callback' => [ $this, 'ddwcpvw_get_messages_template' ],
 						],
 						'broadcast'     => [
-							'label'    => esc_html__( 'Broadcast', 'order-via-chat-for-woocommerce' ),
+							'label'    => esc_html__( 'Broadcast', 'devdiggers-order-via-chat-for-woocommerce' ),
 							'layout'   => 'full-width',
 							'callback' => [ $this, 'ddwcpvw_get_broadcast_message_template' ],
 						],
 						'configuration' => [
-							'label'  => esc_html__( 'Configuration', 'order-via-chat-for-woocommerce' ),
+							'label'  => esc_html__( 'Configuration', 'devdiggers-order-via-chat-for-woocommerce' ),
 							'layout' => 'sidebar',
 							'tabs'   => [
 								'general'       => [
-									'label'    => esc_html__( 'General', 'order-via-chat-for-woocommerce' ),
+									'label'    => esc_html__( 'General', 'devdiggers-order-via-chat-for-woocommerce' ),
 									'icon'     => DDFW_SVG::get_svg_icon( 'general', true, [ 'size' => 18 ] ),
 									'callback' => [ $this, 'ddwcpvw_get_general_configuration_template' ],
 								],
 								'display'       => [
-									'label'    => esc_html__( 'Display', 'order-via-chat-for-woocommerce' ),
+									'label'    => esc_html__( 'Display', 'devdiggers-order-via-chat-for-woocommerce' ),
 									'icon'     => DDFW_SVG::get_svg_icon( 'ddwcpvw-display', true, [ 'size' => 18 ] ),
 									'callback' => [ $this, 'ddwcpvw_get_display_configuration_template' ],
 								],
 								'twilio'        => [
-									'label'    => esc_html__( 'Twilio', 'order-via-chat-for-woocommerce' ),
+									'label'    => esc_html__( 'Twilio', 'devdiggers-order-via-chat-for-woocommerce' ),
 									'icon'     => DDFW_SVG::get_svg_icon( 'ddwcpvw-twilio', true, [ 'size' => 18 ] ),
 									'callback' => [ $this, 'ddwcpvw_get_twilio_configuration_template' ],
 								],
 								'chat'          => [
-									'label'    => esc_html__( 'Chat Assistant', 'order-via-chat-for-woocommerce' ),
+									'label'    => esc_html__( 'Chat Assistant', 'devdiggers-order-via-chat-for-woocommerce' ),
 									'icon'     => DDFW_SVG::get_svg_icon( 'ddwcpvw-chat', true, [ 'size' => 18 ] ),
 									'callback' => [ $this, 'ddwcpvw_get_chat_configuration_template' ],
 								],
 								'notifications' => [
-									'label'    => esc_html__( 'Notifications', 'order-via-chat-for-woocommerce' ),
+									'label'    => esc_html__( 'Notifications', 'devdiggers-order-via-chat-for-woocommerce' ),
 									'icon'     => DDFW_SVG::get_svg_icon( 'ddwcpvw-bell', true, [ 'size' => 18 ] ),
 									'callback' => [ $this, 'ddwcpvw_get_notifications_configuration_template' ],
 								],
 								'wallet'        => [
-									'label'    => esc_html__( 'Wallet', 'order-via-chat-for-woocommerce' ),
+									'label'    => esc_html__( 'Wallet', 'devdiggers-order-via-chat-for-woocommerce' ),
 									'icon'     => DDFW_SVG::get_svg_icon( 'ddwcpvw-wallet', true, [ 'size' => 18 ] ),
 									'callback' => [ $this, 'ddwcpvw_get_wallet_configuration_template' ],
 								],
@@ -146,13 +146,13 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		public function ddwcpvw_get_orders_template() {
 			$this->ddwcpvw_upgrade_card(
 				'orders',
-				esc_html__( 'Turn every chat into a real WooCommerce order with Pro', 'order-via-chat-for-woocommerce' ),
-				esc_html__( 'In Free the customer sends you their cart and you finish the sale by hand. Pro connects your number through Twilio, so a chat assistant places the order for you while the customer is still in WhatsApp.', 'order-via-chat-for-woocommerce' ),
+				esc_html__( 'Turn every chat into a real WooCommerce order with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'In Free the customer sends you their cart and you finish the sale by hand. Pro connects your number through Twilio, so a chat assistant places the order for you while the customer is still in WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
-					esc_html__( 'The customer picks shipping and payment in the chat, and the order is created in WooCommerce on the spot', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Cash on delivery, bank transfer and cheque confirmed in the chat, a secure payment link for cards', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Stock, coupons, taxes and shipping rules applied exactly as at your checkout', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'A list of every WhatsApp order with revenue, status and the customer behind it', 'order-via-chat-for-woocommerce' ),
+					esc_html__( 'The customer picks shipping and payment in the chat, and the order is created in WooCommerce on the spot', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Cash on delivery, bank transfer and cheque confirmed in the chat, a secure payment link for cards', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Stock, coupons, taxes and shipping rules applied exactly as at your checkout', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'A list of every WhatsApp order with revenue, status and the customer behind it', 'devdiggers-order-via-chat-for-woocommerce' ),
 				]
 			);
 		}
@@ -165,13 +165,13 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		public function ddwcpvw_get_messages_template() {
 			$this->ddwcpvw_upgrade_card(
 				'messages',
-				esc_html__( 'See every WhatsApp message and whether it arrived, with Pro', 'order-via-chat-for-woocommerce' ),
-				esc_html__( 'Pro keeps a log of every message your store sends and receives, with the delivery status WhatsApp reports back.', 'order-via-chat-for-woocommerce' ),
+				esc_html__( 'See every WhatsApp message and whether it arrived, with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Pro keeps a log of every message your store sends and receives, with the delivery status WhatsApp reports back.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
-					esc_html__( 'Sent, delivered, read and failed, for every message', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Plain language reasons for a failed message, so you know what to fix', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Search, filter and export the log to CSV', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Automatic clean up after the number of days you choose', 'order-via-chat-for-woocommerce' ),
+					esc_html__( 'Sent, delivered, read and failed, for every message', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Plain language reasons for a failed message, so you know what to fix', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Search, filter and export the log to CSV', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Automatic clean up after the number of days you choose', 'devdiggers-order-via-chat-for-woocommerce' ),
 				]
 			);
 		}
@@ -184,13 +184,13 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		public function ddwcpvw_get_broadcast_message_template() {
 			$this->ddwcpvw_upgrade_card(
 				'broadcast',
-				esc_html__( 'Message your customers in bulk on WhatsApp with Pro', 'order-via-chat-for-woocommerce' ),
-				esc_html__( 'Announce a sale, a restock or a new arrival to the customers who want to hear it, straight to the app they read first.', 'order-via-chat-for-woocommerce' ),
+				esc_html__( 'Message your customers in bulk on WhatsApp with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Announce a sale, a restock or a new arrival to the customers who want to hear it, straight to the app they read first.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
-					esc_html__( 'Send to all customers, recent buyers, buyers of a product, or hand picked people', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Text, an image, or an approved WhatsApp template, with a live phone preview', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Customers who opted out are skipped automatically', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'A delivery report when the broadcast is done', 'order-via-chat-for-woocommerce' ),
+					esc_html__( 'Send to all customers, recent buyers, buyers of a product, or hand picked people', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Text, an image, or an approved WhatsApp template, with a live phone preview', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Customers who opted out are skipped automatically', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'A delivery report when the broadcast is done', 'devdiggers-order-via-chat-for-woocommerce' ),
 				]
 			);
 		}
@@ -203,12 +203,12 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		public function ddwcpvw_get_twilio_configuration_template() {
 			$this->ddwcpvw_upgrade_card(
 				'twilio',
-				esc_html__( 'Send WhatsApp messages from your store with Pro', 'order-via-chat-for-woocommerce' ),
-				esc_html__( 'Free opens WhatsApp on the customer\'s phone. Pro connects your number to the official WhatsApp Business Platform through Twilio, so your store can message customers by itself.', 'order-via-chat-for-woocommerce' ),
+				esc_html__( 'Send WhatsApp messages from your store with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Free opens WhatsApp on the customer\'s phone. Pro connects your number to the official WhatsApp Business Platform through Twilio, so your store can message customers by itself.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
-					esc_html__( 'Connect with your Account SID and Auth Token, or a revocable API key', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'A one click connection test and a test message to your own phone', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Every incoming message checked against Twilio\'s signature', 'order-via-chat-for-woocommerce' ),
+					esc_html__( 'Connect with your Account SID and Auth Token, or a revocable API key', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'A one click connection test and a test message to your own phone', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Every incoming message checked against Twilio\'s signature', 'devdiggers-order-via-chat-for-woocommerce' ),
 				]
 			);
 		}
@@ -221,13 +221,13 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		public function ddwcpvw_get_chat_configuration_template() {
 			$this->ddwcpvw_upgrade_card(
 				'chat-assistant',
-				esc_html__( 'Let a chat assistant take the order for you, with Pro', 'order-via-chat-for-woocommerce' ),
-				esc_html__( 'Pro answers the customer in WhatsApp, walks them through shipping and payment, and places the order without you typing a word.', 'order-via-chat-for-woocommerce' ),
+				esc_html__( 'Let a chat assistant take the order for you, with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Pro answers the customer in WhatsApp, walks them through shipping and payment, and places the order without you typing a word.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
-					esc_html__( 'Choose which payment methods the chat offers', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Customers reply STATUS for their latest order, HELP for options, AGENT for a person', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Every reply worded your way', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Unfinished requests expire on their own', 'order-via-chat-for-woocommerce' ),
+					esc_html__( 'Choose which payment methods the chat offers', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Customers reply STATUS for their latest order, HELP for options, AGENT for a person', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Every reply worded your way', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Unfinished requests expire on their own', 'devdiggers-order-via-chat-for-woocommerce' ),
 				]
 			);
 		}
@@ -240,14 +240,14 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		public function ddwcpvw_get_notifications_configuration_template() {
 			$this->ddwcpvw_upgrade_card(
 				'notifications',
-				esc_html__( 'Send order updates and win back lost sales on WhatsApp, with Pro', 'order-via-chat-for-woocommerce' ),
-				esc_html__( 'Customers read WhatsApp in minutes, not days. Pro keeps them in the loop automatically and nudges the ones who did not finish.', 'order-via-chat-for-woocommerce' ),
+				esc_html__( 'Send order updates and win back lost sales on WhatsApp, with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Customers read WhatsApp in minutes, not days. Pro keeps them in the loop automatically and nudges the ones who did not finish.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
-					esc_html__( 'Order confirmation and status updates, with your own wording per status', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'A new order alert on your own phone', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Reminders for unfinished chats and unpaid orders, with a payment link', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'A WhatsApp opt in at checkout, and STOP and START handled for you', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Approved WhatsApp templates, so updates arrive after the 24 hour window', 'order-via-chat-for-woocommerce' ),
+					esc_html__( 'Order confirmation and status updates, with your own wording per status', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'A new order alert on your own phone', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Reminders for unfinished chats and unpaid orders, with a payment link', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'A WhatsApp opt in at checkout, and STOP and START handled for you', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Approved WhatsApp templates, so updates arrive after the 24 hour window', 'devdiggers-order-via-chat-for-woocommerce' ),
 				]
 			);
 		}
@@ -260,12 +260,12 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		public function ddwcpvw_get_wallet_configuration_template() {
 			$this->ddwcpvw_upgrade_card(
 				'wallet',
-				esc_html__( 'Let customers pay from their store wallet in the chat, with Pro', 'order-via-chat-for-woocommerce' ),
-				esc_html__( 'Pro works with DevDiggers Wallet, so customers can check their balance and pay for an order without leaving WhatsApp.', 'order-via-chat-for-woocommerce' ),
+				esc_html__( 'Let customers pay from their store wallet in the chat, with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Pro works with DevDiggers Wallet, so customers can check their balance and pay for an order without leaving WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
-					esc_html__( 'Customers reply WALLET to see their balance', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'Pay for the order from the wallet, right in the chat', 'order-via-chat-for-woocommerce' ),
-					esc_html__( 'A WhatsApp message whenever money is added to or taken from the wallet', 'order-via-chat-for-woocommerce' ),
+					esc_html__( 'Customers reply WALLET to see their balance', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'Pay for the order from the wallet, right in the chat', 'devdiggers-order-via-chat-for-woocommerce' ),
+					esc_html__( 'A WhatsApp message whenever money is added to or taken from the wallet', 'devdiggers-order-via-chat-for-woocommerce' ),
 				]
 			);
 		}
@@ -334,10 +334,10 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 				return $footer_text;
 			}
 
-			$review_link = '<a href="' . esc_url( 'https://wordpress.org/support/plugin/order-via-chat-for-woocommerce/reviews/#new-post' ) . '" target="_blank" rel="noopener noreferrer" title="' . esc_attr__( 'Review', 'order-via-chat-for-woocommerce' ) . '" aria-label="' . esc_attr__( 'Review', 'order-via-chat-for-woocommerce' ) . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 32" height="10"><path d="M16 26.534L6.111 32 8 20.422l-8-8.2 11.056-1.688L16 0l4.944 10.534L32 12.223l-8 8.2L25.889 32zm40 0L46.111 32 48 20.422l-8-8.2 11.056-1.688L56 0l4.944 10.534L72 12.223l-8 8.2L65.889 32zm40 0L86.111 32 88 20.422l-8-8.2 11.056-1.688L96 0l4.944 10.534L112 12.223l-8 8.2L105.889 32zm40 0L126.111 32 128 20.422l-8-8.2 11.056-1.688L136 0l4.944 10.534L152 12.223l-8 8.2L145.889 32zm40 0L166.111 32 168 20.422l-8-8.2 11.056-1.688L176 0l4.944 10.534L192 12.223l-8 8.2L185.889 32z" fill="#F5A623" fill-rule="evenodd"/></svg></a>';
+			$review_link = '<a href="' . esc_url( 'https://wordpress.org/support/plugin/devdiggers-order-via-chat-for-woocommerce/reviews/#new-post' ) . '" target="_blank" rel="noopener noreferrer" title="' . esc_attr__( 'Review', 'devdiggers-order-via-chat-for-woocommerce' ) . '" aria-label="' . esc_attr__( 'Review', 'devdiggers-order-via-chat-for-woocommerce' ) . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 32" height="10"><path d="M16 26.534L6.111 32 8 20.422l-8-8.2 11.056-1.688L16 0l4.944 10.534L32 12.223l-8 8.2L25.889 32zm40 0L46.111 32 48 20.422l-8-8.2 11.056-1.688L56 0l4.944 10.534L72 12.223l-8 8.2L65.889 32zm40 0L86.111 32 88 20.422l-8-8.2 11.056-1.688L96 0l4.944 10.534L112 12.223l-8 8.2L105.889 32zm40 0L126.111 32 128 20.422l-8-8.2 11.056-1.688L136 0l4.944 10.534L152 12.223l-8 8.2L145.889 32zm40 0L166.111 32 168 20.422l-8-8.2 11.056-1.688L176 0l4.944 10.534L192 12.223l-8 8.2L185.889 32z" fill="#F5A623" fill-rule="evenodd"/></svg></a>';
 
 			/* translators: %s: star rating link. */
-			return sprintf( esc_html__( 'If Order via Chat for WooCommerce is working well for you, please leave us a %s rating. It really helps.', 'order-via-chat-for-woocommerce' ), $review_link );
+			return sprintf( esc_html__( 'If DevDiggers Order via Chat for WooCommerce is working well for you, please leave us a %s rating. It really helps.', 'devdiggers-order-via-chat-for-woocommerce' ), $review_link );
 		}
 
 		/**

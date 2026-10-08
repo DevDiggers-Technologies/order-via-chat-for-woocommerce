@@ -3,7 +3,7 @@
  * File handler
  *
  * @author DevDiggers
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  * @version 1.0.0
  */
 
@@ -47,13 +47,13 @@ if ( ! class_exists( 'DDWCPVW_File_Handler' ) ) {
 		public function ddwcpvw_register_block() {
 			wp_register_script( 'ddwcpvw-block-script', DDWCPVW_PLUGIN_URL . 'assets/js/block.js', [ 'wp-blocks', 'wp-element', 'wp-components', 'wp-block-editor', 'wp-server-side-render', 'wp-i18n' ], filemtime( DDWCPVW_PLUGIN_FILE . 'assets/js/block.js' ), true );
 			wp_register_style( 'ddwcpvw-block-style', DDWCPVW_PLUGIN_URL . 'assets/css/front.css', [], filemtime( DDWCPVW_PLUGIN_FILE . 'assets/css/front.css' ) );
-			wp_set_script_translations( 'ddwcpvw-block-script', 'order-via-chat-for-woocommerce' );
+			wp_set_script_translations( 'ddwcpvw-block-script', 'devdiggers-order-via-chat-for-woocommerce' );
 
 			register_block_type(
 				'ddwcpvw/order-button',
 				[
 					'api_version'     => 3,
-					'title'           => __( 'Order on WhatsApp', 'order-via-chat-for-woocommerce' ),
+					'title'           => __( 'Order on WhatsApp', 'devdiggers-order-via-chat-for-woocommerce' ),
 					'category'        => 'woocommerce',
 					'editor_script'   => 'ddwcpvw-block-script',
 					'editor_style'    => 'ddwcpvw-block-style',
@@ -117,7 +117,7 @@ if ( ! class_exists( 'DDWCPVW_File_Handler' ) ) {
 				'tracking'                         => get_option( '_ddwcpvw_tracking' ),
 
 				// Storefront.
-				'purchase_button_label'            => $button_label ? $button_label : esc_html__( 'Order on WhatsApp', 'order-via-chat-for-woocommerce' ),
+				'purchase_button_label'            => $button_label ? $button_label : esc_html__( 'Order on WhatsApp', 'devdiggers-order-via-chat-for-woocommerce' ),
 				'purchase_button_text_color'       => $text_color ? $text_color : '#ffffff',
 				'purchase_button_background_color' => $background ? $background : '#25d366',
 				'button_show_icon'                 => get_option( '_ddwcpvw_button_show_icon', 'yes' ),
@@ -130,12 +130,12 @@ if ( ! class_exists( 'DDWCPVW_File_Handler' ) ) {
 
 				// Order received page.
 				'thankyou_enabled'                 => get_option( '_ddwcpvw_thankyou_enabled', 'yes' ),
-				'thankyou_label'                   => $thankyou_label ? $thankyou_label : esc_html__( 'Send my order on WhatsApp', 'order-via-chat-for-woocommerce' ),
+				'thankyou_label'                   => $thankyou_label ? $thankyou_label : esc_html__( 'Send my order on WhatsApp', 'devdiggers-order-via-chat-for-woocommerce' ),
 
 				// Floating chat button.
 				'floating_enabled'                 => get_option( '_ddwcpvw_floating_enabled' ),
 				'floating_number'                  => get_option( '_ddwcpvw_floating_number' ),
-				'floating_message'                 => $floating_message ? $floating_message : esc_html__( 'Hi! I have a question about your store.', 'order-via-chat-for-woocommerce' ),
+				'floating_message'                 => $floating_message ? $floating_message : esc_html__( 'Hi! I have a question about your store.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				'floating_label'                   => get_option( '_ddwcpvw_floating_label' ),
 				'floating_position'                => 'left' === get_option( '_ddwcpvw_floating_position' ) ? 'left' : 'right',
 				'floating_pages'                   => 'woocommerce' === get_option( '_ddwcpvw_floating_pages' ) ? 'woocommerce' : 'all',

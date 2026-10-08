@@ -11,7 +11,7 @@ module.exports = function( grunt ) {
 					domainPath: '/i18n',
 					exclude: [ '\.git/*', 'bin/*', 'node_modules/*', 'tests/*', 'vendor/*', 'devdiggers-framework/*' ],
 					mainFile: 'functions.php',
-					potFilename: 'order-via-chat-for-woocommerce.pot',
+					potFilename: 'devdiggers-order-via-chat-for-woocommerce.pot',
 					potHeaders: {
 						poedit: true,
 						'x-poedit-keywordslist': true
@@ -24,7 +24,7 @@ module.exports = function( grunt ) {
 
 		checktextdomain: {
 			options:{
-				text_domain: 'order-via-chat-for-woocommerce',
+				text_domain: 'devdiggers-order-via-chat-for-woocommerce',
 				keywords: [
 					'__:1,2d',
 					'_e:1,2d',

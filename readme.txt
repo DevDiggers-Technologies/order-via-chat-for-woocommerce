@@ -1,4 +1,4 @@
-=== Order via Chat for WooCommerce ===
+=== DevDiggers Order via Chat for WooCommerce ===
 Contributors: devdiggers
 Plugin URI: https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/
 Author: DevDiggers
@@ -19,7 +19,7 @@ Add an Order on WhatsApp button to WooCommerce. Customers send a product or thei
 
 Plenty of shoppers would rather ask than fill in a checkout form. They want to check a size, agree a delivery time or simply talk to a person before they pay. In many countries that conversation happens on WhatsApp.
 
-**[Order via Chat for WooCommerce](https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/)** puts an Order on WhatsApp button on your product, shop and cart pages. One tap opens WhatsApp with the order already written out: the products, options, quantities, prices, an estimated subtotal and where to deliver. The customer presses send, and you finish the sale in the chat.
+**[DevDiggers Order via Chat for WooCommerce](https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/)** puts an Order on WhatsApp button on your product, shop and cart pages. One tap opens WhatsApp with the order already written out: the products, options, quantities, prices, an estimated subtotal and where to deliver. The customer presses send, and you finish the sale in the chat.
 
 It works with your personal WhatsApp or the free WhatsApp Business app. There is no API account to set up, no monthly fee and no message limit, because the plugin only opens a chat. Nothing is sent through a third party server.
 
@@ -27,7 +27,7 @@ It works with your personal WhatsApp or the free WhatsApp Business app. There is
 
 * [View Demo](https://demo.devdiggers.com/woocommerce-purchase-via-whatsapp/)
 * [Documentation](https://docs.devdiggers.com/woocommerce-purchase-via-whatsapp/)
-* [Support](https://wordpress.org/support/plugin/order-via-chat-for-woocommerce/)
+* [Support](https://wordpress.org/support/plugin/devdiggers-order-via-chat-for-woocommerce/)
 * [Upgrade to Pro](https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/)
 
 = How it works =
@@ -143,7 +143,7 @@ The free plugin opens WhatsApp and lets you take it from there. [Pro](https://de
 = Automatic installation =
 
 1. In your WordPress admin, go to **Plugins > Add New**.
-2. Search for "Order via Chat for WooCommerce".
+2. Search for "DevDiggers Order via Chat for WooCommerce".
 3. Click **Install Now**, then **Activate**. WooCommerce must be active.
 
 = Manual installation =
@@ -237,7 +237,7 @@ Yes. It is translation ready and ships with a POT file in the `i18n` folder.
 
 = Where can I get help? =
 
-Use the [WordPress.org support forum](https://wordpress.org/support/plugin/order-via-chat-for-woocommerce/) or [contact DevDiggers](https://devdiggers.com/contact/).
+Use the [WordPress.org support forum](https://wordpress.org/support/plugin/devdiggers-order-via-chat-for-woocommerce/) or [contact DevDiggers](https://devdiggers.com/contact/).
 
 == Screenshots ==
 

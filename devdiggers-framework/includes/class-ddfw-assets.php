@@ -84,10 +84,10 @@ if ( ! class_exists( 'DDFW_Assets' ) ) {
 							'ajaxNonce' => wp_create_nonce( 'ddfw-nonce' ),
 						],
 						'i18n' => [
-							'subscribing'         => esc_html__( 'Subscribing...', 'order-via-chat-for-woocommerce' ),
-							'subscribe'           => esc_html__( 'Subscribe', 'order-via-chat-for-woocommerce' ),
-							'subscriptionSuccess' => esc_html__( 'Thank you for subscribing!', 'order-via-chat-for-woocommerce' ),
-							'subscriptionError'   => esc_html__( 'An error occurred. Please try again.', 'order-via-chat-for-woocommerce' ),
+							'subscribing'         => esc_html__( 'Subscribing...', 'devdiggers-order-via-chat-for-woocommerce' ),
+							'subscribe'           => esc_html__( 'Subscribe', 'devdiggers-order-via-chat-for-woocommerce' ),
+							'subscriptionSuccess' => esc_html__( 'Thank you for subscribing!', 'devdiggers-order-via-chat-for-woocommerce' ),
+							'subscriptionError'   => esc_html__( 'An error occurred. Please try again.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						],
 					]
 				);
@@ -105,12 +105,12 @@ if ( ! class_exists( 'DDFW_Assets' ) ) {
 						'ajaxNonce' => wp_create_nonce( 'ddfw-nonce' ),
 					],
 					'i18n' => [
-						'selectImage'         => esc_html__( 'Select Image', 'order-via-chat-for-woocommerce' ),
-						'useImage'            => esc_html__( 'Use Image', 'order-via-chat-for-woocommerce' ),
-						'pleaseEnter'         => esc_html__( 'Please enter', 'order-via-chat-for-woocommerce' ),
-						'moreCharacter'       => esc_html__( 'or more character', 'order-via-chat-for-woocommerce' ),
-						'noResult'            => esc_html__( 'No result Found', 'order-via-chat-for-woocommerce' ),
-						'deleteConfirm'       => esc_html__( 'Are you sure you want to delete?', 'order-via-chat-for-woocommerce' ),
+						'selectImage'         => esc_html__( 'Select Image', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'useImage'            => esc_html__( 'Use Image', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'pleaseEnter'         => esc_html__( 'Please enter', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'moreCharacter'       => esc_html__( 'or more character', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'noResult'            => esc_html__( 'No result Found', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'deleteConfirm'       => esc_html__( 'Are you sure you want to delete?', 'devdiggers-order-via-chat-for-woocommerce' ),
 					],
 					'site_url'          => site_url(),
 					'devdiggers_plugin' => $devdiggers_plugin,

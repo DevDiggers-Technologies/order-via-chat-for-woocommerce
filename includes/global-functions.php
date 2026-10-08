@@ -2,7 +2,7 @@
 /**
  * Shared option lists and small helpers used across admin screens, the wizard and the storefront.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  * @version 1.0.0
  */
 
@@ -136,14 +136,14 @@ if ( ! function_exists( 'ddwcpvw_get_product_position_options' ) ) {
 	 */
 	function ddwcpvw_get_product_position_options() {
 		return [
-			''   => esc_html__( 'Do not show', 'order-via-chat-for-woocommerce' ),
-			'55' => esc_html__( 'Default (end of the summary)', 'order-via-chat-for-woocommerce' ),
-			'10' => esc_html__( 'After Product Image', 'order-via-chat-for-woocommerce' ),
-			'8'  => esc_html__( 'After Product Title', 'order-via-chat-for-woocommerce' ),
-			'3'  => esc_html__( 'Before Product Title', 'order-via-chat-for-woocommerce' ),
-			'25' => esc_html__( 'After Short Description', 'order-via-chat-for-woocommerce' ),
-			'35' => esc_html__( 'After Add To Cart Button', 'order-via-chat-for-woocommerce' ),
-			'5'  => esc_html__( 'Before Tab Information', 'order-via-chat-for-woocommerce' ),
+			''   => esc_html__( 'Do not show', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'55' => esc_html__( 'Default (end of the summary)', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'10' => esc_html__( 'After Product Image', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'8'  => esc_html__( 'After Product Title', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'3'  => esc_html__( 'Before Product Title', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'25' => esc_html__( 'After Short Description', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'35' => esc_html__( 'After Add To Cart Button', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'5'  => esc_html__( 'Before Tab Information', 'devdiggers-order-via-chat-for-woocommerce' ),
 		];
 	}
 }
@@ -156,9 +156,9 @@ if ( ! function_exists( 'ddwcpvw_get_shop_position_options' ) ) {
 	 */
 	function ddwcpvw_get_shop_position_options() {
 		return [
-			''       => esc_html__( 'Do not show', 'order-via-chat-for-woocommerce' ),
-			'before' => esc_html__( 'Before Add To Cart Button', 'order-via-chat-for-woocommerce' ),
-			'after'  => esc_html__( 'After Add To Cart Button', 'order-via-chat-for-woocommerce' ),
+			''       => esc_html__( 'Do not show', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'before' => esc_html__( 'Before Add To Cart Button', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'after'  => esc_html__( 'After Add To Cart Button', 'devdiggers-order-via-chat-for-woocommerce' ),
 		];
 	}
 }
@@ -171,9 +171,9 @@ if ( ! function_exists( 'ddwcpvw_get_cart_position_options' ) ) {
 	 */
 	function ddwcpvw_get_cart_position_options() {
 		return [
-			''   => esc_html__( 'Do not show', 'order-via-chat-for-woocommerce' ),
-			'10' => esc_html__( 'Before Proceed To Checkout Button', 'order-via-chat-for-woocommerce' ),
-			'20' => esc_html__( 'After Proceed To Checkout Button', 'order-via-chat-for-woocommerce' ),
+			''   => esc_html__( 'Do not show', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'10' => esc_html__( 'Before Proceed To Checkout Button', 'devdiggers-order-via-chat-for-woocommerce' ),
+			'20' => esc_html__( 'After Proceed To Checkout Button', 'devdiggers-order-via-chat-for-woocommerce' ),
 		];
 	}
 }
@@ -278,27 +278,27 @@ if ( ! function_exists( 'ddwcpvw_get_order_summary' ) ) {
 
 		if ( $order->get_shipping_method() ) {
 			/* translators: %s: shipping method. */
-			$summary .= "\n" . sprintf( esc_html__( '*Shipping:* %s', 'order-via-chat-for-woocommerce' ), wp_strip_all_tags( $order->get_shipping_method() ) );
+			$summary .= "\n" . sprintf( esc_html__( '*Shipping:* %s', 'devdiggers-order-via-chat-for-woocommerce' ), wp_strip_all_tags( $order->get_shipping_method() ) );
 		}
 
 		if ( $order->get_total_discount() > 0 ) {
 			/* translators: %s: discount amount. */
-			$summary .= "\n" . sprintf( esc_html__( '*Discount:* %s', 'order-via-chat-for-woocommerce' ), ddwcpvw_format_price( $order->get_total_discount(), $currency ) );
+			$summary .= "\n" . sprintf( esc_html__( '*Discount:* %s', 'devdiggers-order-via-chat-for-woocommerce' ), ddwcpvw_format_price( $order->get_total_discount(), $currency ) );
 		}
 
 		// Lines shown without tax: list it, so the lines add up to the total.
 		if ( ! $incl_tax && $order->get_total_tax() > 0 ) {
 			/* translators: 1: tax label, 2: tax amount. */
-			$summary .= "\n" . sprintf( esc_html__( '*%1$s:* %2$s', 'order-via-chat-for-woocommerce' ), WC()->countries->tax_or_vat(), ddwcpvw_format_price( $order->get_total_tax(), $currency ) );
+			$summary .= "\n" . sprintf( esc_html__( '*%1$s:* %2$s', 'devdiggers-order-via-chat-for-woocommerce' ), WC()->countries->tax_or_vat(), ddwcpvw_format_price( $order->get_total_tax(), $currency ) );
 		}
 
 		if ( $order->get_payment_method_title() ) {
 			/* translators: %s: payment method title. */
-			$summary .= "\n" . sprintf( esc_html__( '*Payment:* %s', 'order-via-chat-for-woocommerce' ), wp_strip_all_tags( $order->get_payment_method_title() ) );
+			$summary .= "\n" . sprintf( esc_html__( '*Payment:* %s', 'devdiggers-order-via-chat-for-woocommerce' ), wp_strip_all_tags( $order->get_payment_method_title() ) );
 		}
 
 		/* translators: %s: order total. */
-		$summary .= "\n" . sprintf( esc_html__( '*Total:* %s', 'order-via-chat-for-woocommerce' ), ddwcpvw_format_price( $order->get_total(), $currency ) );
+		$summary .= "\n" . sprintf( esc_html__( '*Total:* %s', 'devdiggers-order-via-chat-for-woocommerce' ), ddwcpvw_format_price( $order->get_total(), $currency ) );
 
 		return trim( $summary );
 	}
@@ -331,11 +331,11 @@ if ( ! function_exists( 'ddwcpvw_get_default_template' ) ) {
 	function ddwcpvw_get_default_template( $name ) {
 		if ( 'thankyou' === $name ) {
 			/* translators: Keep the {placeholders} as they are. */
-			return __( "Hello! I just placed order #{order_number} on {site_name}.\n\n{order_summary}\n\n*Name:* {customer_name}", 'order-via-chat-for-woocommerce' );
+			return __( "Hello! I just placed order #{order_number} on {site_name}.\n\n{order_summary}\n\n*Name:* {customer_name}", 'devdiggers-order-via-chat-for-woocommerce' );
 		}
 
 		/* translators: Keep the {placeholders} as they are. */
-		return __( "Hello! I would like to order:\n\n{items}\n\n*Estimated subtotal:* {subtotal}\n*Name:* {customer_name}\n*Deliver to:* {address}", 'order-via-chat-for-woocommerce' );
+		return __( "Hello! I would like to order:\n\n{items}\n\n*Estimated subtotal:* {subtotal}\n*Name:* {customer_name}\n*Deliver to:* {address}", 'devdiggers-order-via-chat-for-woocommerce' );
 	}
 }
 
@@ -378,6 +378,6 @@ if ( ! function_exists( 'ddwcpvw_get_template_tags_help' ) ) {
 	 */
 	function ddwcpvw_get_template_tags_help( $tags ) {
 		/* translators: %s: list of tags. */
-		return sprintf( esc_html__( 'Available tags: %s. Wrap words in *stars* for bold.', 'order-via-chat-for-woocommerce' ), '<code>' . implode( '</code> <code>', array_map( 'esc_html', $tags ) ) . '</code>' );
+		return sprintf( esc_html__( 'Available tags: %s. Wrap words in *stars* for bold.', 'devdiggers-order-via-chat-for-woocommerce' ), '<code>' . implode( '</code> <code>', array_map( 'esc_html', $tags ) ) . '</code>' );
 	}
 }

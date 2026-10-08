@@ -2,7 +2,7 @@
 /**
  * Setup wizard integration.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  * @version 1.0.0
  */
 
@@ -36,37 +36,37 @@ if ( ! class_exists( 'DDWCPVW_Setup_Wizard' ) ) {
 		 */
 		public function ddwcpvw_get_wizard_config() {
 			return [
-				'plugin_slug'    => 'order-via-chat-for-woocommerce',
-				'plugin_file'    => 'order-via-chat-for-woocommerce/functions.php',
+				'plugin_slug'    => 'devdiggers-order-via-chat-for-woocommerce',
+				'plugin_file'    => 'devdiggers-order-via-chat-for-woocommerce/functions.php',
 				'dashboard_page' => 'ddwcpvw-dashboard',
 				'redirect_url'   => admin_url( 'admin.php?page=ddwcpvw-dashboard' ),
 				'brand'          => [
-					'name'        => esc_html__( 'Order via Chat', 'order-via-chat-for-woocommerce' ),
-					'description' => esc_html__( 'Welcome to Order via Chat for WooCommerce. Two quick steps and your customers can send you orders on WhatsApp.', 'order-via-chat-for-woocommerce' ),
+					'name'        => esc_html__( 'Order via Chat', 'devdiggers-order-via-chat-for-woocommerce' ),
+					'description' => esc_html__( 'Welcome to DevDiggers Order via Chat for WooCommerce. Two quick steps and your customers can send you orders on WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				],
 				'steps'          => [
 					'welcome' => [
-						'label'         => esc_html__( 'Welcome', 'order-via-chat-for-woocommerce' ),
+						'label'         => esc_html__( 'Welcome', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'view_callback' => [ $this, 'ddwcpvw_welcome_view' ],
 					],
 					'general' => [
-						'label'         => esc_html__( 'General', 'order-via-chat-for-woocommerce' ),
-						'title'         => esc_html__( 'Where should orders go?', 'order-via-chat-for-woocommerce' ),
-						'description'   => esc_html__( 'Add the WhatsApp number that receives order requests.', 'order-via-chat-for-woocommerce' ),
+						'label'         => esc_html__( 'General', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'title'         => esc_html__( 'Where should orders go?', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'description'   => esc_html__( 'Add the WhatsApp number that receives order requests.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'view_callback' => [ $this, 'ddwcpvw_general_view' ],
 						'save_callback' => [ $this, 'ddwcpvw_save_fields' ],
 					],
 					'display' => [
-						'label'         => esc_html__( 'Display', 'order-via-chat-for-woocommerce' ),
-						'title'         => esc_html__( 'Where customers can order', 'order-via-chat-for-woocommerce' ),
-						'description'   => esc_html__( 'Choose where the WhatsApp button appears. You can fine-tune its look later under Configuration, Display.', 'order-via-chat-for-woocommerce' ),
+						'label'         => esc_html__( 'Display', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'title'         => esc_html__( 'Where customers can order', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'description'   => esc_html__( 'Choose where the WhatsApp button appears. You can fine-tune its look later under Configuration, Display.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'view_callback' => [ $this, 'ddwcpvw_display_view' ],
 						'save_callback' => [ $this, 'ddwcpvw_save_fields' ],
 					],
 					'ready'   => [
-						'label'             => esc_html__( 'Ready!', 'order-via-chat-for-woocommerce' ),
-						'ready_title'       => esc_html__( 'You are ready to take orders on WhatsApp.', 'order-via-chat-for-woocommerce' ),
-						'ready_description' => esc_html__( 'Open one of your products and tap the WhatsApp button to try the whole journey yourself.', 'order-via-chat-for-woocommerce' ),
+						'label'             => esc_html__( 'Ready!', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'ready_title'       => esc_html__( 'You are ready to take orders on WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'ready_description' => esc_html__( 'Open one of your products and tap the WhatsApp button to try the whole journey yourself.', 'devdiggers-order-via-chat-for-woocommerce' ),
 					],
 				],
 			];
@@ -93,9 +93,9 @@ if ( ! class_exists( 'DDWCPVW_Setup_Wizard' ) ) {
 				<div class="ddfw-success-icon-wrap">
 					<?php echo wp_kses( $this->ddwcpvw_get_logo( 100 ), ddfw_kses_allowed_svg_tags() ); ?>
 				</div>
-				<h2 class="ddfw-setup-wizard-ready-title"><?php esc_html_e( 'Welcome to Order via Chat!', 'order-via-chat-for-woocommerce' ); ?></h2>
+				<h2 class="ddfw-setup-wizard-ready-title"><?php esc_html_e( 'Welcome to Order via Chat!', 'devdiggers-order-via-chat-for-woocommerce' ); ?></h2>
 				<p class="ddfw-setup-wizard-ready-desc">
-					<?php esc_html_e( 'Let customers order in the app they already use every day. In the next two steps you will add your WhatsApp number and place the button. It takes about a minute.', 'order-via-chat-for-woocommerce' ); ?>
+					<?php esc_html_e( 'Let customers order in the app they already use every day. In the next two steps you will add your WhatsApp number and place the button. It takes about a minute.', 'devdiggers-order-via-chat-for-woocommerce' ); ?>
 				</p>
 			</div>
 			<?php
@@ -111,8 +111,8 @@ if ( ! class_exists( 'DDWCPVW_Setup_Wizard' ) ) {
 				[
 					[
 						'type'        => 'tel',
-						'label'       => esc_html__( 'Your WhatsApp Number', 'order-via-chat-for-woocommerce' ),
-						'description' => esc_html__( 'With the country code. It can be your personal WhatsApp or a WhatsApp Business app number.', 'order-via-chat-for-woocommerce' ),
+						'label'       => esc_html__( 'Your WhatsApp Number', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'description' => esc_html__( 'With the country code. It can be your personal WhatsApp or a WhatsApp Business app number.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'id'          => 'ddwcpvw-whatsapp-number',
 						'name'        => '_ddwcpvw_whatsapp_number',
 						'value'       => get_option( '_ddwcpvw_whatsapp_number' ),
@@ -120,18 +120,18 @@ if ( ! class_exists( 'DDWCPVW_Setup_Wizard' ) ) {
 					],
 					[
 						'type'           => 'checkbox',
-						'label'          => esc_html__( 'Status', 'order-via-chat-for-woocommerce' ),
-						'checkbox_label' => esc_html__( 'Enable WhatsApp ordering on my store', 'order-via-chat-for-woocommerce' ),
-						'description'    => esc_html__( 'You can switch it off at any time without losing your settings.', 'order-via-chat-for-woocommerce' ),
+						'label'          => esc_html__( 'Status', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'checkbox_label' => esc_html__( 'Enable WhatsApp ordering on my store', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'description'    => esc_html__( 'You can switch it off at any time without losing your settings.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'id'             => 'ddwcpvw-enabled',
 						'name'           => '_ddwcpvw_enabled',
 						'value'          => get_option( '_ddwcpvw_enabled', 'yes' ),
 					],
 					[
 						'type'           => 'checkbox',
-						'label'          => esc_html__( 'Guest Customers', 'order-via-chat-for-woocommerce' ),
-						'checkbox_label' => esc_html__( 'Let visitors order without an account', 'order-via-chat-for-woocommerce' ),
-						'description'    => esc_html__( 'Guests add their delivery details in a short popup before WhatsApp opens.', 'order-via-chat-for-woocommerce' ),
+						'label'          => esc_html__( 'Guest Customers', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'checkbox_label' => esc_html__( 'Let visitors order without an account', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'description'    => esc_html__( 'Guests add their delivery details in a short popup before WhatsApp opens.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'id'             => 'ddwcpvw-allow-guests',
 						'name'           => '_ddwcpvw_allow_guests',
 						'value'          => get_option( '_ddwcpvw_allow_guests', 'yes' ),
@@ -150,8 +150,8 @@ if ( ! class_exists( 'DDWCPVW_Setup_Wizard' ) ) {
 				[
 					[
 						'type'        => 'select',
-						'label'       => esc_html__( 'Product Page', 'order-via-chat-for-woocommerce' ),
-						'description' => esc_html__( 'Most orders start here. The default spot sits at the end of the product summary, below the add to cart area.', 'order-via-chat-for-woocommerce' ),
+						'label'       => esc_html__( 'Product Page', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'description' => esc_html__( 'Most orders start here. The default spot sits at the end of the product summary, below the add to cart area.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'id'          => 'ddwcpvw-product-page-position',
 						'name'        => '_ddwcpvw_product_page_position',
 						'value'       => get_option( '_ddwcpvw_product_page_position', '55' ),
@@ -159,8 +159,8 @@ if ( ! class_exists( 'DDWCPVW_Setup_Wizard' ) ) {
 					],
 					[
 						'type'        => 'select',
-						'label'       => esc_html__( 'Cart Page', 'order-via-chat-for-woocommerce' ),
-						'description' => esc_html__( 'Lets customers send their whole cart to you in one message.', 'order-via-chat-for-woocommerce' ),
+						'label'       => esc_html__( 'Cart Page', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'description' => esc_html__( 'Lets customers send their whole cart to you in one message.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'id'          => 'ddwcpvw-cart-page-position',
 						'name'        => '_ddwcpvw_cart_page_position',
 						'value'       => get_option( '_ddwcpvw_cart_page_position', '20' ),
@@ -168,9 +168,9 @@ if ( ! class_exists( 'DDWCPVW_Setup_Wizard' ) ) {
 					],
 					[
 						'type'           => 'checkbox',
-						'label'          => esc_html__( 'Floating Chat Button', 'order-via-chat-for-woocommerce' ),
-						'checkbox_label' => esc_html__( 'Show a WhatsApp chat bubble in the corner of every page', 'order-via-chat-for-woocommerce' ),
-						'description'    => esc_html__( 'Shoppers can ask a question before they buy.', 'order-via-chat-for-woocommerce' ),
+						'label'          => esc_html__( 'Floating Chat Button', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'checkbox_label' => esc_html__( 'Show a WhatsApp chat bubble in the corner of every page', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'description'    => esc_html__( 'Shoppers can ask a question before they buy.', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'id'             => 'ddwcpvw-floating-enabled',
 						'name'           => '_ddwcpvw_floating_enabled',
 						'value'          => get_option( '_ddwcpvw_floating_enabled' ),
@@ -201,7 +201,7 @@ if ( ! class_exists( 'DDWCPVW_Setup_Wizard' ) ) {
 			}
 
 			if ( isset( $values['_ddwcpvw_whatsapp_number'] ) && ! get_option( '_ddwcpvw_whatsapp_number' ) ) {
-				return new \WP_Error( 'ddwcpvw_number', esc_html__( 'Please enter a valid WhatsApp number with the country code.', 'order-via-chat-for-woocommerce' ) );
+				return new \WP_Error( 'ddwcpvw_number', esc_html__( 'Please enter a valid WhatsApp number with the country code.', 'devdiggers-order-via-chat-for-woocommerce' ) );
 			}
 
 			return true;

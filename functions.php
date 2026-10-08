@@ -1,12 +1,12 @@
 <?php
 /**
- * Plugin Name: Order via Chat for WooCommerce
+ * Plugin Name: DevDiggers Order via Chat for WooCommerce
  * Description: Let customers send their product or whole cart to your WhatsApp in one tap, with delivery details, a floating chat button and order request analytics.
  * Plugin URI: https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/
  * Author: DevDiggers
  * Author URI: https://devdiggers.com/
  * Version: 1.0.0
- * Text Domain: order-via-chat-for-woocommerce
+ * Text Domain: devdiggers-order-via-chat-for-woocommerce
  * Domain Path: /i18n
  * Requires at least: 6.5
  * Requires PHP: 7.4
@@ -17,10 +17,10 @@
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  */
 
-// ddwcpvw: Order via Chat for WooCommerce.
+// ddwcpvw: DevDiggers Order via Chat for WooCommerce.
 
 use DDWCPurchaseViaWhatsApp\Includes\DDWCPVW_File_Handler;
 
@@ -93,7 +93,7 @@ if ( ! class_exists( 'DDWCPVW_Free_Init' ) ) {
 							<p>
 								<?php
 								/* translators: %1$s: opening link tag, %2$s: closing link tag */
-								printf( esc_html__( 'Order via Chat for WooCommerce is activated but not effective. It requires %1$sWooCommerce%2$s in order to work.', 'order-via-chat-for-woocommerce' ), '<a href="' . esc_url( 'https://wordpress.org/plugins/woocommerce/' ) . '" target="_blank">', '</a>' );
+								printf( esc_html__( 'DevDiggers Order via Chat for WooCommerce is activated but not effective. It requires %1$sWooCommerce%2$s in order to work.', 'devdiggers-order-via-chat-for-woocommerce' ), '<a href="' . esc_url( 'https://wordpress.org/plugins/woocommerce/' ) . '" target="_blank">', '</a>' );
 								?>
 							</p>
 						</div>
@@ -115,9 +115,9 @@ if ( ! class_exists( 'DDWCPVW_Free_Init' ) ) {
 			if ( ( $on_plugin_page || wp_doing_ajax() ) && class_exists( '\DevDiggers\Framework\Includes\DDFW_Review_Notice' ) ) {
 				new \DevDiggers\Framework\Includes\DDFW_Review_Notice(
 					[
-						'plugin_name'   => esc_html__( 'Order via Chat for WooCommerce', 'order-via-chat-for-woocommerce' ),
+						'plugin_name'   => esc_html__( 'DevDiggers Order via Chat for WooCommerce', 'devdiggers-order-via-chat-for-woocommerce' ),
 						'plugin_prefix' => 'ddwcpvw',
-						'review_url'    => 'https://wordpress.org/support/plugin/order-via-chat-for-woocommerce/reviews/#new-post',
+						'review_url'    => 'https://wordpress.org/support/plugin/devdiggers-order-via-chat-for-woocommerce/reviews/#new-post',
 					]
 				);
 			}
@@ -132,13 +132,13 @@ if ( ! class_exists( 'DDWCPVW_Free_Init' ) ) {
 		public function ddwcpvw_plugin_settings_link( $links ) {
 			ob_start();
 			?>
-			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ddwcpvw-dashboard' ) ); ?>"><?php esc_html_e( 'Dashboard', 'order-via-chat-for-woocommerce' ); ?></a>
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ddwcpvw-dashboard' ) ); ?>"><?php esc_html_e( 'Dashboard', 'devdiggers-order-via-chat-for-woocommerce' ); ?></a>
 			|
-			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ddwcpvw-dashboard&menu=configuration' ) ); ?>"><?php esc_html_e( 'Configuration', 'order-via-chat-for-woocommerce' ); ?></a>
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ddwcpvw-dashboard&menu=configuration' ) ); ?>"><?php esc_html_e( 'Configuration', 'devdiggers-order-via-chat-for-woocommerce' ); ?></a>
 			|
-			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ddwcpvw-dashboard&setup-wizard=true' ) ); ?>"><?php esc_html_e( 'Setup Wizard', 'order-via-chat-for-woocommerce' ); ?></a>
+			<a href="<?php echo esc_url( admin_url( 'admin.php?page=ddwcpvw-dashboard&setup-wizard=true' ) ); ?>"><?php esc_html_e( 'Setup Wizard', 'devdiggers-order-via-chat-for-woocommerce' ); ?></a>
 			|
-			<a href="<?php echo esc_url( 'https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/' ); ?>" style="color: #0256ff; font-weight: bold;" target="_blank"><?php esc_html_e( 'Upgrade to Pro', 'order-via-chat-for-woocommerce' ); ?></a>
+			<a href="<?php echo esc_url( 'https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/' ); ?>" style="color: #0256ff; font-weight: bold;" target="_blank"><?php esc_html_e( 'Upgrade to Pro', 'devdiggers-order-via-chat-for-woocommerce' ); ?></a>
 			<?php
 			array_unshift( $links, ob_get_clean() );
 
@@ -155,9 +155,9 @@ if ( ! class_exists( 'DDWCPVW_Free_Init' ) ) {
 		public function ddwcpvw_plugin_row_meta( $links, $file ) {
 			if ( plugin_basename( __FILE__ ) === $file ) {
 				$row_meta = [
-					'support'       => '<a href="https://devdiggers.com/contact/" aria-label="' . esc_attr__( 'Support', 'order-via-chat-for-woocommerce' ) . '">' . esc_html__( 'Support', 'order-via-chat-for-woocommerce' ) . '</a>',
-					'documentation' => '<a href="https://docs.devdiggers.com/woocommerce-purchase-via-whatsapp/" aria-label="' . esc_attr__( 'Documentation', 'order-via-chat-for-woocommerce' ) . '">' . esc_html__( 'Documentation', 'order-via-chat-for-woocommerce' ) . '</a>',
-					'review'        => '<a href="https://wordpress.org/support/plugin/order-via-chat-for-woocommerce/reviews/#new-post" target="_blank" title="' . esc_attr__( 'Review', 'order-via-chat-for-woocommerce' ) . '" aria-label="' . esc_attr__( 'Review', 'order-via-chat-for-woocommerce' ) . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 32" height="10"><path d="M16 26.534L6.111 32 8 20.422l-8-8.2 11.056-1.688L16 0l4.944 10.534L32 12.223l-8 8.2L25.889 32zm40 0L46.111 32 48 20.422l-8-8.2 11.056-1.688L56 0l4.944 10.534L72 12.223l-8 8.2L65.889 32zm40 0L86.111 32 88 20.422l-8-8.2 11.056-1.688L96 0l4.944 10.534L112 12.223l-8 8.2L105.889 32zm40 0L126.111 32 128 20.422l-8-8.2 11.056-1.688L136 0l4.944 10.534L152 12.223l-8 8.2L145.889 32zm40 0L166.111 32 168 20.422l-8-8.2 11.056-1.688L176 0l4.944 10.534L192 12.223l-8 8.2L185.889 32z" fill="#F5A623" fill-rule="evenodd"/></svg></a>',
+					'support'       => '<a href="https://devdiggers.com/contact/" aria-label="' . esc_attr__( 'Support', 'devdiggers-order-via-chat-for-woocommerce' ) . '">' . esc_html__( 'Support', 'devdiggers-order-via-chat-for-woocommerce' ) . '</a>',
+					'documentation' => '<a href="https://docs.devdiggers.com/woocommerce-purchase-via-whatsapp/" aria-label="' . esc_attr__( 'Documentation', 'devdiggers-order-via-chat-for-woocommerce' ) . '">' . esc_html__( 'Documentation', 'devdiggers-order-via-chat-for-woocommerce' ) . '</a>',
+					'review'        => '<a href="https://wordpress.org/support/plugin/devdiggers-order-via-chat-for-woocommerce/reviews/#new-post" target="_blank" title="' . esc_attr__( 'Review', 'devdiggers-order-via-chat-for-woocommerce' ) . '" aria-label="' . esc_attr__( 'Review', 'devdiggers-order-via-chat-for-woocommerce' ) . '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 32" height="10"><path d="M16 26.534L6.111 32 8 20.422l-8-8.2 11.056-1.688L16 0l4.944 10.534L32 12.223l-8 8.2L25.889 32zm40 0L46.111 32 48 20.422l-8-8.2 11.056-1.688L56 0l4.944 10.534L72 12.223l-8 8.2L65.889 32zm40 0L86.111 32 88 20.422l-8-8.2 11.056-1.688L96 0l4.944 10.534L112 12.223l-8 8.2L105.889 32zm40 0L126.111 32 128 20.422l-8-8.2 11.056-1.688L136 0l4.944 10.534L152 12.223l-8 8.2L145.889 32zm40 0L166.111 32 168 20.422l-8-8.2 11.056-1.688L176 0l4.944 10.534L192 12.223l-8 8.2L185.889 32z" fill="#F5A623" fill-rule="evenodd"/></svg></a>',
 				];
 
 				$links = array_merge( $links, $row_meta );
@@ -218,9 +218,9 @@ register_activation_hook(
 		// A fresh store goes through the setup wizard. One that already has a WhatsApp number
 		// (an earlier install) is configured, so it is not sent there again.
 		if ( get_option( '_ddwcpvw_whatsapp_number' ) ) {
-			update_option( 'ddfw_setup_wizard_completed_order-via-chat-for-woocommerce', true );
+			update_option( 'ddfw_setup_wizard_completed_devdiggers-order-via-chat-for-woocommerce', true );
 		} else {
-			set_transient( 'ddfw_activation_redirect_order-via-chat-for-woocommerce', true, 30 );
+			set_transient( 'ddfw_activation_redirect_devdiggers-order-via-chat-for-woocommerce', true, 30 );
 		}
 	}
 );

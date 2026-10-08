@@ -26,7 +26,7 @@ module.exports = function( api ) {
 					[
 						'@wordpress/babel-plugin-makepot',
 						{
-							output: 'i18n/order-via-chat-for-woocommerce.po',
+							output: 'i18n/devdiggers-order-via-chat-for-woocommerce.po',
 						},
 					],
 				],

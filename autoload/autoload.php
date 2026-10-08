@@ -2,7 +2,7 @@
 /**
  * Dynamically loads classes
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  */
 
 defined( 'ABSPATH' ) || exit();

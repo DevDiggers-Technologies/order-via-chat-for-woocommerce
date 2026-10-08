@@ -51,8 +51,8 @@ if ( ! class_exists( 'DDFW_Plugin_Dashboard' ) ) {
 			if ( ! empty( $args ) ) {
 				$default_args = [
 					'parent_slug' => ddfw_get_parent_menu_slug(),
-					'page_title'  => __( 'Plugin Dashboard', 'order-via-chat-for-woocommerce' ),
-					'menu_title'  => __( 'Plugin', 'order-via-chat-for-woocommerce' ),
+					'page_title'  => __( 'Plugin Dashboard', 'devdiggers-order-via-chat-for-woocommerce' ),
+					'menu_title'  => __( 'Plugin', 'devdiggers-order-via-chat-for-woocommerce' ),
 					'capability'  => ddfw_get_menu_capability(),
 					'icon_url'    => '',
 					'position'    => null,
@@ -169,9 +169,9 @@ if ( ! class_exists( 'DDFW_Plugin_Dashboard' ) ) {
 				'dirtyGuard'      => true,
 				'licenseInterval' => 30,
 				'i18n'            => [
-					'unsavedChanges' => esc_html__( 'You have unsaved changes. Do you want to leave this page?', 'order-via-chat-for-woocommerce' ),
+					'unsavedChanges' => esc_html__( 'You have unsaved changes. Do you want to leave this page?', 'devdiggers-order-via-chat-for-woocommerce' ),
 					/* translators: %s: screen title. */
-					'loaded'         => esc_html__( '%s loaded', 'order-via-chat-for-woocommerce' ),
+					'loaded'         => esc_html__( '%s loaded', 'devdiggers-order-via-chat-for-woocommerce' ),
 				],
 			];
 
@@ -379,7 +379,7 @@ if ( ! class_exists( 'DDFW_Plugin_Dashboard' ) ) {
 				do_action( 'ddfw_render_setup_wizard', $page );
 			} else {
 				// Fallback if no wizard matches this dashboard page.
-				echo '<div class="notice notice-error"><p>' . esc_html__( 'Setup wizard not found for this plugin.', 'order-via-chat-for-woocommerce' ) . '</p></div>';
+				echo '<div class="notice notice-error"><p>' . esc_html__( 'Setup wizard not found for this plugin.', 'devdiggers-order-via-chat-for-woocommerce' ) . '</p></div>';
 			}
 		}
 	}

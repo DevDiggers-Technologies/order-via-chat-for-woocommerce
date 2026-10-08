@@ -8,7 +8,7 @@
  *
  *   php bin/test-free-boundary.php
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  */
 
 $root   = dirname( __DIR__ ) . '/';

@@ -2,7 +2,7 @@
 /**
  * Admin callbacks.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  * @version 1.0.0
  */
 
@@ -105,7 +105,7 @@ if ( ! class_exists( 'DDWCPVW_Admin_Functions' ) ) {
 		public function ddwcpvw_add_order_meta_box() {
 			$screen = function_exists( 'wc_get_page_screen_id' ) ? wc_get_page_screen_id( 'shop-order' ) : 'shop_order';
 
-			add_meta_box( 'ddwcpvw-order-whatsapp', esc_html__( 'WhatsApp', 'order-via-chat-for-woocommerce' ), [ $this, 'ddwcpvw_render_order_meta_box' ], $screen, 'side', 'default' );
+			add_meta_box( 'ddwcpvw-order-whatsapp', esc_html__( 'WhatsApp', 'devdiggers-order-via-chat-for-woocommerce' ), [ $this, 'ddwcpvw_render_order_meta_box' ], $screen, 'side', 'default' );
 		}
 
 		/**
@@ -125,14 +125,14 @@ if ( ! class_exists( 'DDWCPVW_Admin_Functions' ) ) {
 
 			if ( ! $phone ) {
 				?>
-				<p class="description"><?php esc_html_e( 'This order has no billing phone, so there is no one to message.', 'order-via-chat-for-woocommerce' ); ?></p>
+				<p class="description"><?php esc_html_e( 'This order has no billing phone, so there is no one to message.', 'devdiggers-order-via-chat-for-woocommerce' ); ?></p>
 				<?php
 				return;
 			}
 
 			$message = sprintf(
 				/* translators: 1: customer first name, 2: order number, 3: order status. */
-				esc_html__( 'Hi %1$s, this is about your order #%2$s, which is now %3$s.', 'order-via-chat-for-woocommerce' ),
+				esc_html__( 'Hi %1$s, this is about your order #%2$s, which is now %3$s.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				$order->get_billing_first_name(),
 				$order->get_order_number(),
 				wc_get_order_status_name( $order->get_status() )
@@ -140,13 +140,13 @@ if ( ! class_exists( 'DDWCPVW_Admin_Functions' ) ) {
 			?>
 			<div class="ddwcpvw-order-box" data-phone="<?php echo esc_attr( preg_replace( '/\D+/', '', $phone ) ); ?>">
 				<p class="ddwcpvw-order-box-phone"><?php echo esc_html( $phone ); ?></p>
-				<label class="screen-reader-text" for="ddwcpvw-order-box-message"><?php esc_html_e( 'Message', 'order-via-chat-for-woocommerce' ); ?></label>
+				<label class="screen-reader-text" for="ddwcpvw-order-box-message"><?php esc_html_e( 'Message', 'devdiggers-order-via-chat-for-woocommerce' ); ?></label>
 				<textarea id="ddwcpvw-order-box-message" class="ddwcpvw-order-box-message" rows="7"><?php echo esc_textarea( $message ); ?></textarea>
 				<p>
-					<a class="button ddwcpvw-order-box-send" href="<?php echo esc_attr( ddwcpvw_get_whatsapp_url( $phone, $message ) ); // esc_url() strips the %0A line breaks; the URL is https://wa.me/ plus digits and rawurlencode() output. ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Open in WhatsApp', 'order-via-chat-for-woocommerce' ); ?></a>
+					<a class="button ddwcpvw-order-box-send" href="<?php echo esc_attr( ddwcpvw_get_whatsapp_url( $phone, $message ) ); // esc_url() strips the %0A line breaks; the URL is https://wa.me/ plus digits and rawurlencode() output. ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Open in WhatsApp', 'devdiggers-order-via-chat-for-woocommerce' ); ?></a>
 				</p>
 				<p class="description">
-					<?php esc_html_e( 'Opens WhatsApp on this device with the message ready to send.', 'order-via-chat-for-woocommerce' ); ?>
+					<?php esc_html_e( 'Opens WhatsApp on this device with the message ready to send.', 'devdiggers-order-via-chat-for-woocommerce' ); ?>
 				</p>
 			</div>
 			<?php

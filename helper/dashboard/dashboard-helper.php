@@ -2,7 +2,7 @@
 /**
  * Dashboard data.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  * @version 1.0.0
  */
 
@@ -123,26 +123,26 @@ if ( ! class_exists( 'DDWCPVW_Dashboard_Helper' ) ) {
 			return [
 				[
 					'done'  => (bool) $config['whatsapp_number'],
-					'title' => esc_html__( 'Add your WhatsApp number', 'order-via-chat-for-woocommerce' ),
-					'desc'  => esc_html__( 'The buttons stay hidden until there is a number to send orders to.', 'order-via-chat-for-woocommerce' ),
+					'title' => esc_html__( 'Add your WhatsApp number', 'devdiggers-order-via-chat-for-woocommerce' ),
+					'desc'  => esc_html__( 'The buttons stay hidden until there is a number to send orders to.', 'devdiggers-order-via-chat-for-woocommerce' ),
 					'url'   => $general,
 				],
 				[
 					'done'  => 'yes' === $config['enabled'],
-					'title' => esc_html__( 'Switch WhatsApp ordering on', 'order-via-chat-for-woocommerce' ),
-					'desc'  => esc_html__( 'Turn on the plugin status in the General tab.', 'order-via-chat-for-woocommerce' ),
+					'title' => esc_html__( 'Switch WhatsApp ordering on', 'devdiggers-order-via-chat-for-woocommerce' ),
+					'desc'  => esc_html__( 'Turn on the plugin status in the General tab.', 'devdiggers-order-via-chat-for-woocommerce' ),
 					'url'   => $general,
 				],
 				[
 					'done'  => '' !== (string) $config['product_page_position'] || '' !== (string) $config['cart_page_position'] || '' !== (string) $config['shop_page_position'],
-					'title' => esc_html__( 'Place the button', 'order-via-chat-for-woocommerce' ),
-					'desc'  => esc_html__( 'Show it on product pages, the cart, or shop pages.', 'order-via-chat-for-woocommerce' ),
+					'title' => esc_html__( 'Place the button', 'devdiggers-order-via-chat-for-woocommerce' ),
+					'desc'  => esc_html__( 'Show it on product pages, the cart, or shop pages.', 'devdiggers-order-via-chat-for-woocommerce' ),
 					'url'   => $display,
 				],
 				[
 					'done'  => ! empty( DDWCPVW_Stats_Helper::get()['days'] ),
-					'title' => esc_html__( 'Send your first order request', 'order-via-chat-for-woocommerce' ),
-					'desc'  => esc_html__( 'Tap the WhatsApp button on one of your products to try the whole journey.', 'order-via-chat-for-woocommerce' ),
+					'title' => esc_html__( 'Send your first order request', 'devdiggers-order-via-chat-for-woocommerce' ),
+					'desc'  => esc_html__( 'Tap the WhatsApp button on one of your products to try the whole journey.', 'devdiggers-order-via-chat-for-woocommerce' ),
 					'url'   => function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'shop' ) : home_url( '/' ),
 				],
 			];

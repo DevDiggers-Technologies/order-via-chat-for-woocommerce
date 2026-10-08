@@ -1,8 +1,8 @@
-# Order via Chat for WooCommerce
+# DevDiggers Order via Chat for WooCommerce
 
 Free WooCommerce plugin by [DevDiggers](https://devdiggers.com/). Customers send a product or their whole cart, with delivery details, to your WhatsApp in one tap. No API account, no fees: the plugin opens an ordinary WhatsApp chat.
 
-- **WordPress.org:** https://wordpress.org/plugins/order-via-chat-for-woocommerce/
+- **WordPress.org:** https://wordpress.org/plugins/devdiggers-order-via-chat-for-woocommerce/
 - **Pro:** https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/
 - **Docs:** https://docs.devdiggers.com/woocommerce-purchase-via-whatsapp/
 

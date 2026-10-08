@@ -2,7 +2,7 @@
 /**
  * Command line script for merging two .pot files.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  */
 
 /**

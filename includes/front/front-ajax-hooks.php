@@ -2,7 +2,7 @@
 /**
  * Front AJAX hooks.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  * @version 1.0.0
  */
 

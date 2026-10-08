@@ -2,5 +2,5 @@
 /**
  * Silence is golden.
  *
- * @package Order via Chat for WooCommerce
+ * @package DevDiggers Order via Chat for WooCommerce
  */
