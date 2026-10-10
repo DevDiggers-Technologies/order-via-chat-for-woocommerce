@@ -10,6 +10,7 @@ namespace DDWCPurchaseViaWhatsApp\Includes;
 
 use DDWCPurchaseViaWhatsApp\Templates\Admin;
 use DevDiggers\Framework\Includes\DDFW_Assets;
+use DevDiggers\Framework\Includes\DDFW_Layout;
 use DevDiggers\Framework\Includes\DDFW_Plugin_Dashboard;
 use DevDiggers\Framework\Includes\DDFW_SVG;
 
@@ -201,8 +202,10 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		 * @return void
 		 */
 		public function ddwcpvw_get_twilio_configuration_template() {
-			$this->ddwcpvw_upgrade_card(
+			$this->ddwcpvw_pro_tab_card(
 				'twilio',
+				esc_html__( 'Twilio Connection', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Connect your WhatsApp Business number so your store can send messages by itself.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				esc_html__( 'Send WhatsApp messages from your store with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
 				esc_html__( 'Free opens WhatsApp on the customer\'s phone. Pro connects your number to the official WhatsApp Business Platform through Twilio, so your store can message customers by itself.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
@@ -219,8 +222,10 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		 * @return void
 		 */
 		public function ddwcpvw_get_chat_configuration_template() {
-			$this->ddwcpvw_upgrade_card(
+			$this->ddwcpvw_pro_tab_card(
 				'chat-assistant',
+				esc_html__( 'Chat Assistant', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Let customers finish an order inside WhatsApp, with replies worded your way.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				esc_html__( 'Let a chat assistant take the order for you, with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
 				esc_html__( 'Pro answers the customer in WhatsApp, walks them through shipping and payment, and places the order without you typing a word.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
@@ -238,8 +243,10 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		 * @return void
 		 */
 		public function ddwcpvw_get_notifications_configuration_template() {
-			$this->ddwcpvw_upgrade_card(
+			$this->ddwcpvw_pro_tab_card(
 				'notifications',
+				esc_html__( 'Notifications', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Keep customers informed about their order and follow up on sales that stalled.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				esc_html__( 'Send order updates and win back lost sales on WhatsApp, with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
 				esc_html__( 'Customers read WhatsApp in minutes, not days. Pro keeps them in the loop automatically and nudges the ones who did not finish.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
@@ -258,8 +265,10 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 		 * @return void
 		 */
 		public function ddwcpvw_get_wallet_configuration_template() {
-			$this->ddwcpvw_upgrade_card(
+			$this->ddwcpvw_pro_tab_card(
 				'wallet',
+				esc_html__( 'Wallet Payments', 'devdiggers-order-via-chat-for-woocommerce' ),
+				esc_html__( 'Let customers check their balance and pay from their store wallet in the chat.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				esc_html__( 'Let customers pay from their store wallet in the chat, with Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
 				esc_html__( 'Pro works with DevDiggers Wallet, so customers can check their balance and pay for an order without leaving WhatsApp.', 'devdiggers-order-via-chat-for-woocommerce' ),
 				[
@@ -289,6 +298,40 @@ if ( ! class_exists( 'DDWCPVW_Admin_Dashboard' ) ) {
 					'upgrade_url'   => 'https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/',
 				]
 			);
+		}
+
+		/**
+		 * A Pro only configuration tab: a section header with the upgrade card under it.
+		 *
+		 * @param string $image    Screenshot name.
+		 * @param string $title    Section heading.
+		 * @param string $intro    Section description.
+		 * @param string $heading  Card heading.
+		 * @param string $text     Card description.
+		 * @param array  $features Feature bullets.
+		 * @return void
+		 */
+		protected function ddwcpvw_pro_tab_card( $image, $title, $intro, $heading, $text, $features ) {
+			$sections = [
+				[
+					'header'            => [
+						'heading'     => $title,
+						'description' => $intro,
+					],
+					'after_header_html' => ddfw_get_upgrade_to_pro_section(
+						[
+							'image_url'     => ddwcpvw_get_pro_image( $image ),
+							'heading'       => $heading,
+							'description'   => $text,
+							'list_features' => $features,
+							'upgrade_url'   => 'https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/',
+						]
+					),
+				],
+			];
+
+			$layout = new DDFW_Layout();
+			$layout->get_form_section_layout( $sections, 'ddwcpvw-' . $image . '-configuration-fields' );
 		}
 
 		/**

@@ -181,7 +181,13 @@ const request = ( source, button, form = null ) => {
 			}
 
 			if ( data.redirect ) {
-				window.location.href = data.redirect;
+				// Show why before leaving, or the customer lands on the login page with no explanation.
+				if ( data.message ) {
+					notify( button, data.message );
+				}
+				setTimeout( () => {
+					window.location.href = data.redirect;
+				}, data.message ? 1500 : 0 );
 				return;
 			}
 

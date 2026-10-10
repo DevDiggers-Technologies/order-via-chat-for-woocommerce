@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/devdiggers-order-via-chat-for-"
 "woocommerce\n"
-"POT-Creation-Date: 2026-10-08 20:17:48+00:00\n"
+"POT-Creation-Date: 2026-10-10 20:59:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -37,11 +37,11 @@ msgstr ""
 msgid "DevDiggers Order via Chat for WooCommerce"
 msgstr ""
 
-#: functions.php:135 includes/admin-dashboard.php:72
+#: functions.php:135 includes/admin-dashboard.php:73
 msgid "Dashboard"
 msgstr ""
 
-#: functions.php:137 includes/admin-dashboard.php:92
+#: functions.php:137 includes/admin-dashboard.php:93
 msgid "Configuration"
 msgstr ""
 
@@ -61,7 +61,7 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: functions.php:160 includes/admin-dashboard.php:337
+#: functions.php:160 includes/admin-dashboard.php:380
 msgid "Review"
 msgstr ""
 
@@ -122,8 +122,8 @@ msgstr ""
 msgid "Opens WhatsApp on this device with the message ready to send."
 msgstr ""
 
-#: includes/admin/setup-wizard.php:44 includes/admin-dashboard.php:60
-#: includes/admin-dashboard.php:65 includes/admin-dashboard.php:66
+#: includes/admin/setup-wizard.php:44 includes/admin-dashboard.php:61
+#: includes/admin-dashboard.php:66 includes/admin-dashboard.php:67
 msgid "Order via Chat"
 msgstr ""
 
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Welcome"
 msgstr ""
 
-#: includes/admin/setup-wizard.php:53 includes/admin-dashboard.php:96
+#: includes/admin/setup-wizard.php:53 includes/admin-dashboard.php:97
 msgid "General"
 msgstr ""
 
@@ -149,7 +149,7 @@ msgstr ""
 msgid "Add the WhatsApp number that receives order requests."
 msgstr ""
 
-#: includes/admin/setup-wizard.php:60 includes/admin-dashboard.php:101
+#: includes/admin/setup-wizard.php:60 includes/admin-dashboard.php:102
 msgid "Display"
 msgstr ""
 
@@ -265,241 +265,274 @@ msgstr ""
 msgid "Please enter a valid WhatsApp number with the country code."
 msgstr ""
 
-#: includes/admin-dashboard.php:77
+#: includes/admin-dashboard.php:78
 msgid "Orders"
 msgstr ""
 
-#: includes/admin-dashboard.php:82
+#: includes/admin-dashboard.php:83
 msgid "Messages"
 msgstr ""
 
-#: includes/admin-dashboard.php:87
+#: includes/admin-dashboard.php:88
 msgid "Broadcast"
 msgstr ""
 
-#: includes/admin-dashboard.php:106
+#: includes/admin-dashboard.php:107
 msgid "Twilio"
 msgstr ""
 
-#: includes/admin-dashboard.php:111
+#: includes/admin-dashboard.php:112 includes/admin-dashboard.php:227
 msgid "Chat Assistant"
 msgstr ""
 
-#: includes/admin-dashboard.php:116
+#: includes/admin-dashboard.php:117 includes/admin-dashboard.php:248
 msgid "Notifications"
 msgstr ""
 
-#: includes/admin-dashboard.php:121
+#: includes/admin-dashboard.php:122
 msgid "Wallet"
 msgstr ""
 
-#: includes/admin-dashboard.php:149
+#: includes/admin-dashboard.php:150
 msgid "Turn every chat into a real WooCommerce order with Pro"
 msgstr ""
 
-#: includes/admin-dashboard.php:150
+#: includes/admin-dashboard.php:151
 msgid ""
 "In Free the customer sends you their cart and you finish the sale by hand. "
 "Pro connects your number through Twilio, so a chat assistant places the "
 "order for you while the customer is still in WhatsApp."
 msgstr ""
 
-#: includes/admin-dashboard.php:152
+#: includes/admin-dashboard.php:153
 msgid ""
 "The customer picks shipping and payment in the chat, and the order is "
 "created in WooCommerce on the spot"
 msgstr ""
 
-#: includes/admin-dashboard.php:153
+#: includes/admin-dashboard.php:154
 msgid ""
 "Cash on delivery, bank transfer and cheque confirmed in the chat, a secure "
 "payment link for cards"
 msgstr ""
 
-#: includes/admin-dashboard.php:154
+#: includes/admin-dashboard.php:155
 msgid "Stock, coupons, taxes and shipping rules applied exactly as at your checkout"
 msgstr ""
 
-#: includes/admin-dashboard.php:155
+#: includes/admin-dashboard.php:156
 msgid ""
 "A list of every WhatsApp order with revenue, status and the customer behind "
 "it"
 msgstr ""
 
-#: includes/admin-dashboard.php:168
+#: includes/admin-dashboard.php:169
 msgid "See every WhatsApp message and whether it arrived, with Pro"
 msgstr ""
 
-#: includes/admin-dashboard.php:169
+#: includes/admin-dashboard.php:170
 msgid ""
 "Pro keeps a log of every message your store sends and receives, with the "
 "delivery status WhatsApp reports back."
 msgstr ""
 
-#: includes/admin-dashboard.php:171
+#: includes/admin-dashboard.php:172
 msgid "Sent, delivered, read and failed, for every message"
 msgstr ""
 
-#: includes/admin-dashboard.php:172
+#: includes/admin-dashboard.php:173
 msgid "Plain language reasons for a failed message, so you know what to fix"
 msgstr ""
 
-#: includes/admin-dashboard.php:173
+#: includes/admin-dashboard.php:174
 msgid "Search, filter and export the log to CSV"
 msgstr ""
 
-#: includes/admin-dashboard.php:174
+#: includes/admin-dashboard.php:175
 msgid "Automatic clean up after the number of days you choose"
 msgstr ""
 
-#: includes/admin-dashboard.php:187
+#: includes/admin-dashboard.php:188
 msgid "Message your customers in bulk on WhatsApp with Pro"
 msgstr ""
 
-#: includes/admin-dashboard.php:188
+#: includes/admin-dashboard.php:189
 msgid ""
 "Announce a sale, a restock or a new arrival to the customers who want to "
 "hear it, straight to the app they read first."
 msgstr ""
 
-#: includes/admin-dashboard.php:190
+#: includes/admin-dashboard.php:191
 msgid ""
 "Send to all customers, recent buyers, buyers of a product, or hand picked "
 "people"
 msgstr ""
 
-#: includes/admin-dashboard.php:191
+#: includes/admin-dashboard.php:192
 msgid "Text, an image, or an approved WhatsApp template, with a live phone preview"
 msgstr ""
 
-#: includes/admin-dashboard.php:192
+#: includes/admin-dashboard.php:193
 msgid "Customers who opted out are skipped automatically"
 msgstr ""
 
-#: includes/admin-dashboard.php:193
+#: includes/admin-dashboard.php:194
 msgid "A delivery report when the broadcast is done"
 msgstr ""
 
-#: includes/admin-dashboard.php:206
+#: includes/admin-dashboard.php:207
+msgid "Twilio Connection"
+msgstr ""
+
+#: includes/admin-dashboard.php:208
+msgid ""
+"Connect your WhatsApp Business number so your store can send messages by "
+"itself."
+msgstr ""
+
+#: includes/admin-dashboard.php:209
 msgid "Send WhatsApp messages from your store with Pro"
 msgstr ""
 
-#: includes/admin-dashboard.php:207
+#: includes/admin-dashboard.php:210
 msgid ""
 "Free opens WhatsApp on the customer's phone. Pro connects your number to "
 "the official WhatsApp Business Platform through Twilio, so your store can "
 "message customers by itself."
 msgstr ""
 
-#: includes/admin-dashboard.php:209
+#: includes/admin-dashboard.php:212
 msgid "Connect with your Account SID and Auth Token, or a revocable API key"
 msgstr ""
 
-#: includes/admin-dashboard.php:210
+#: includes/admin-dashboard.php:213
 msgid "A one click connection test and a test message to your own phone"
 msgstr ""
 
-#: includes/admin-dashboard.php:211
+#: includes/admin-dashboard.php:214
 msgid "Every incoming message checked against Twilio's signature"
 msgstr ""
 
-#: includes/admin-dashboard.php:224
+#: includes/admin-dashboard.php:228
+msgid "Let customers finish an order inside WhatsApp, with replies worded your way."
+msgstr ""
+
+#: includes/admin-dashboard.php:229
 msgid "Let a chat assistant take the order for you, with Pro"
 msgstr ""
 
-#: includes/admin-dashboard.php:225
+#: includes/admin-dashboard.php:230
 msgid ""
 "Pro answers the customer in WhatsApp, walks them through shipping and "
 "payment, and places the order without you typing a word."
 msgstr ""
 
-#: includes/admin-dashboard.php:227
+#: includes/admin-dashboard.php:232
 msgid "Choose which payment methods the chat offers"
 msgstr ""
 
-#: includes/admin-dashboard.php:228
+#: includes/admin-dashboard.php:233
 msgid ""
 "Customers reply STATUS for their latest order, HELP for options, AGENT for "
 "a person"
 msgstr ""
 
-#: includes/admin-dashboard.php:229
+#: includes/admin-dashboard.php:234
 msgid "Every reply worded your way"
 msgstr ""
 
-#: includes/admin-dashboard.php:230
+#: includes/admin-dashboard.php:235
 msgid "Unfinished requests expire on their own"
 msgstr ""
 
-#: includes/admin-dashboard.php:243
+#: includes/admin-dashboard.php:249
+msgid ""
+"Keep customers informed about their order and follow up on sales that "
+"stalled."
+msgstr ""
+
+#: includes/admin-dashboard.php:250
 msgid "Send order updates and win back lost sales on WhatsApp, with Pro"
 msgstr ""
 
-#: includes/admin-dashboard.php:244
+#: includes/admin-dashboard.php:251
 msgid ""
 "Customers read WhatsApp in minutes, not days. Pro keeps them in the loop "
 "automatically and nudges the ones who did not finish."
 msgstr ""
 
-#: includes/admin-dashboard.php:246
+#: includes/admin-dashboard.php:253
+#: templates/admin/configuration/general-configuration-template.php:200
 msgid "Order confirmation and status updates, with your own wording per status"
 msgstr ""
 
-#: includes/admin-dashboard.php:247
+#: includes/admin-dashboard.php:254
+#: templates/admin/configuration/general-configuration-template.php:201
 msgid "A new order alert on your own phone"
 msgstr ""
 
-#: includes/admin-dashboard.php:248
+#: includes/admin-dashboard.php:255
+#: templates/admin/configuration/general-configuration-template.php:202
 msgid "Reminders for unfinished chats and unpaid orders, with a payment link"
 msgstr ""
 
-#: includes/admin-dashboard.php:249
+#: includes/admin-dashboard.php:256
 msgid "A WhatsApp opt in at checkout, and STOP and START handled for you"
 msgstr ""
 
-#: includes/admin-dashboard.php:250
+#: includes/admin-dashboard.php:257
 msgid "Approved WhatsApp templates, so updates arrive after the 24 hour window"
 msgstr ""
 
-#: includes/admin-dashboard.php:263
+#: includes/admin-dashboard.php:270
+msgid "Wallet Payments"
+msgstr ""
+
+#: includes/admin-dashboard.php:271
+msgid ""
+"Let customers check their balance and pay from their store wallet in the "
+"chat."
+msgstr ""
+
+#: includes/admin-dashboard.php:272
 msgid "Let customers pay from their store wallet in the chat, with Pro"
 msgstr ""
 
-#: includes/admin-dashboard.php:264
+#: includes/admin-dashboard.php:273
 msgid ""
 "Pro works with DevDiggers Wallet, so customers can check their balance and "
 "pay for an order without leaving WhatsApp."
 msgstr ""
 
-#: includes/admin-dashboard.php:266
+#: includes/admin-dashboard.php:275
 msgid "Customers reply WALLET to see their balance"
 msgstr ""
 
-#: includes/admin-dashboard.php:267
+#: includes/admin-dashboard.php:276
 msgid "Pay for the order from the wallet, right in the chat"
 msgstr ""
 
-#: includes/admin-dashboard.php:268
+#: includes/admin-dashboard.php:277
 msgid "A WhatsApp message whenever money is added to or taken from the wallet"
 msgstr ""
 
-#: includes/admin-dashboard.php:340
+#: includes/admin-dashboard.php:383
 #. translators: %s: star rating link.
 msgid ""
 "If DevDiggers Order via Chat for WooCommerce is working well for you, "
 "please leave us a %s rating. It really helps."
 msgstr ""
 
-#: includes/file-handler.php:56 includes/file-handler.php:120
+#: includes/file-handler.php:59 includes/file-handler.php:123
 #: src/block/index.js:13
 msgid "Order on WhatsApp"
 msgstr ""
 
-#: includes/file-handler.php:133
+#: includes/file-handler.php:136
 msgid "Send my order on WhatsApp"
 msgstr ""
 
-#: includes/file-handler.php:138
+#: includes/file-handler.php:141
 msgid "Hi! I have a question about your store."
 msgstr ""
 
@@ -1085,6 +1118,34 @@ msgstr ""
 msgid ""
 "The message holds the order number, items, shipping, payment method and "
 "total, so you can confirm it in the chat."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:192
+msgid "Order Updates"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:193
+msgid ""
+"Keep customers in the loop after they order, without sending each message "
+"yourself."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:197
+msgid "Update customers on WhatsApp automatically, in Pro"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:198
+msgid ""
+"Free opens WhatsApp on the customer's phone. Pro sends the message from "
+"your store, so updates go out by themselves."
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:211
+msgid "Status Updates"
+msgstr ""
+
+#: templates/admin/configuration/general-configuration-template.php:212
+msgid "Message the customer when the order status changes"
 msgstr ""
 
 #: templates/admin/dashboard/dashboard-template.php:65

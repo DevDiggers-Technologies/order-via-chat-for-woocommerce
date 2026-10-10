@@ -36,6 +36,9 @@ if ( ! class_exists( 'DDWCPVW_File_Handler' ) ) {
 			} elseif ( 'yes' === $ddwcpvw_configuration['enabled'] && $ddwcpvw_configuration['whatsapp_number'] ) {
 				// No number means no chat to open, so the buttons would only lead to an error.
 				new Front\DDWCPVW_Front_Hooks( $ddwcpvw_configuration );
+			} else {
+				// Not ready to take orders: render the shortcode as nothing rather than as raw text.
+				add_shortcode( 'ddwcpvw_button', '__return_empty_string' );
 			}
 		}
 

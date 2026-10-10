@@ -187,6 +187,36 @@ if ( ! class_exists( 'DDWCPVW_General_Configuration_Template' ) ) {
 						],
 					],
 				],
+				[
+					'header'            => [
+						'heading'     => esc_html__( 'Order Updates', 'devdiggers-order-via-chat-for-woocommerce' ),
+						'description' => esc_html__( 'Keep customers in the loop after they order, without sending each message yourself.', 'devdiggers-order-via-chat-for-woocommerce' ),
+					],
+					'after_header_html' => ddfw_get_upgrade_to_pro_section(
+						[
+							'heading'       => esc_html__( 'Update customers on WhatsApp automatically, in Pro', 'devdiggers-order-via-chat-for-woocommerce' ),
+							'description'   => esc_html__( 'Free opens WhatsApp on the customer\'s phone. Pro sends the message from your store, so updates go out by themselves.', 'devdiggers-order-via-chat-for-woocommerce' ),
+							'list_features' => [
+								esc_html__( 'Order confirmation and status updates, with your own wording per status', 'devdiggers-order-via-chat-for-woocommerce' ),
+								esc_html__( 'A new order alert on your own phone', 'devdiggers-order-via-chat-for-woocommerce' ),
+								esc_html__( 'Reminders for unfinished chats and unpaid orders, with a payment link', 'devdiggers-order-via-chat-for-woocommerce' ),
+							],
+							'upgrade_url'   => 'https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/',
+						]
+					),
+					'fields'            => [
+						ddfw_locked_field(
+							[
+								'type'           => 'checkbox',
+								'label'          => esc_html__( 'Status Updates', 'devdiggers-order-via-chat-for-woocommerce' ),
+								'checkbox_label' => esc_html__( 'Message the customer when the order status changes', 'devdiggers-order-via-chat-for-woocommerce' ),
+								'id'             => 'ddwcpvw-status-updates',
+								'value'          => '',
+							],
+							'ddwcpvw'
+						),
+					],
+				],
 			];
 
 			$layout = new DDFW_Layout();

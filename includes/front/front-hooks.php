@@ -25,6 +25,11 @@ if ( ! class_exists( 'DDWCPVW_Front_Hooks' ) ) {
 
 			$product_position = (string) $ddwcpvw_configuration['product_page_position'];
 
+			// Catalog mode removes Add to cart, so the WhatsApp button is the only way to buy and cannot be hidden.
+			if ( '' === $product_position && 'yes' === $ddwcpvw_configuration['catalog_mode'] ) {
+				$product_position = '55';
+			}
+
 			if ( '' !== $product_position ) {
 				if ( '5' === $product_position ) {
 					add_action( 'woocommerce_after_single_product_summary', [ $this, 'ddwcpvw_add_content_in_single_product_page' ], 5 );
