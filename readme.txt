@@ -1,9 +1,9 @@
-=== DevDiggers Order via Chat for WooCommerce ===
+=== Order via Chat for WooCommerce - Click to Chat Order Button & Catalog Mode ===
 Contributors: devdiggers
 Plugin URI: https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/
 Author: DevDiggers
 Author URI: https://devdiggers.com/
-Tags: whatsapp, whatsapp order, woocommerce whatsapp, click to chat, catalog mode
+Tags: whatsapp order, whatsapp button, chat to order, catalog mode, woocommerce whatsapp
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
@@ -13,24 +13,25 @@ Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Add an Order on WhatsApp button to WooCommerce. Customers send a product or their cart, with delivery details, to your WhatsApp in one tap.
+Add a WhatsApp order button to WooCommerce. Customers send a product or their cart with delivery details to you in one tap. Catalog mode included.
 
 == Description ==
 
 Plenty of shoppers would rather ask than fill in a checkout form. They want to check a size, agree a delivery time or simply talk to a person before they pay. In many countries that conversation happens on WhatsApp.
 
-**[DevDiggers Order via Chat for WooCommerce](https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/)** puts an Order on WhatsApp button on your product, shop and cart pages. One tap opens WhatsApp with the order already written out: the products, options, quantities, prices, an estimated subtotal and where to deliver. The customer presses send, and you finish the sale in the chat.
+This **[WooCommerce WhatsApp plugin](https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/)** adds an Order on WhatsApp button to your product, shop and cart pages. One tap opens WhatsApp with the order already written out: the products, options, quantities, prices, an estimated subtotal and where to deliver. The customer presses send, and you finish the sale in the chat.
 
-It works with your personal WhatsApp or the free WhatsApp Business app. There is no API account to set up, no monthly fee and no message limit, because the plugin only opens a chat. Nothing is sent through a third party server.
+It works with your personal WhatsApp or the free WhatsApp Business app. There is no API account to set up, no monthly fee and no message limit, because the plugin only opens a chat. Nothing is sent through a third party server. Want to see it first? [Try the live demo](https://demo.devdiggers.com/order-via-chat-for-woocommerce/).
 
 = Quick links =
 
-* [View Demo](https://demo.devdiggers.com/woocommerce-purchase-via-whatsapp/)
+* [Free Plugin Live Demo](https://demo.devdiggers.com/order-via-chat-for-woocommerce/)
+* [Pro Demo](https://demo.devdiggers.com/woocommerce-purchase-via-whatsapp/)
 * [Documentation](https://docs.devdiggers.com/woocommerce-purchase-via-whatsapp/)
 * [Support](https://wordpress.org/support/plugin/devdiggers-order-via-chat-for-woocommerce/)
 * [Upgrade to Pro](https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/)
 
-= How it works =
+= How to let customers order on WhatsApp =
 
 1. You add your WhatsApp number and choose where the button appears.
 2. A customer taps Order on WhatsApp on a product, or sends their whole cart from the cart page.
@@ -40,18 +41,18 @@ It works with your personal WhatsApp or the free WhatsApp Business app. There is
 
 = What the free plugin does =
 
-=== WhatsApp order button on product, shop and cart pages ===
+=== WhatsApp order button for product, shop and cart pages ===
 
 The button sits where customers already decide to buy, so ordering by chat is never more than one tap away.
 
 * Order on WhatsApp button on single product pages, in eight positions
-* Button on shop and category pages, before or after Add to cart, including Product Collection block grids
-* Send the whole cart from the cart page, in the classic cart and the Cart block
+* WhatsApp button on shop and category pages, before or after Add to cart, including Product Collection block grids
+* Send the whole cart to WhatsApp from the cart page, in the classic cart and the Cart block
 * Variable products: the chosen options and the matching variation are sent, and the button waits until an option is picked
 * The quantity field is respected, and stock is checked before WhatsApp opens
 * Show the buttons on all devices, on phones and tablets only, or on desktop only
 
-=== A complete order message, written your way ===
+=== Prefilled WhatsApp order message with delivery details ===
 
 You get everything you need to confirm the order without a single follow up question.
 
@@ -60,7 +61,7 @@ You get everything you need to confirm the order without a single follow up ques
 * The delivery address, taken from the customer's account or from a short popup that uses your store's required checkout fields
 * Edit the message with tags such as {items}, {subtotal}, {customer_name}, {customer_phone} and {address}. Lines whose tag is empty drop out on their own
 
-=== Catalog mode: take orders on WhatsApp only ===
+=== WooCommerce catalog mode: take orders on WhatsApp only ===
 
 Some stores do not want a checkout at all. They quote, confirm and collect payment in the chat.
 
@@ -70,13 +71,13 @@ Some stores do not want a checkout at all. They quote, confirm and collect payme
 * Hide prices for wholesale, custom or "ask for price" products, and leave prices out of the message
 * Products you exclude keep their normal checkout
 
-=== Order button block and shortcode ===
+=== WhatsApp order button block and shortcode ===
 
 * An Order on WhatsApp block for the block editor, with a live preview
 * The `[ddwcpvw_button]` shortcode for page builders and custom templates
 * Pass `id="123"` for a specific product, or `type="cart"` to send the whole cart
 
-=== After a normal checkout ===
+=== Send my order on WhatsApp after checkout ===
 
 * A Send my order on WhatsApp button on the order received page, with the order number, items, shipping, tax, payment method and total. Works with the block checkout too
 * Edit that message with tags such as {order_number}, {order_total} and {order_summary}
@@ -89,7 +90,7 @@ Some stores do not want a checkout at all. They quote, confirm and collect payme
 * On product pages the product name and link are added to the message
 * Left or right corner, and an option to hide it on phones
 
-=== Control and design ===
+=== Button design and store controls ===
 
 * Exclude products or whole categories, which keep their normal checkout
 * Hide the button on out of stock products
@@ -97,7 +98,7 @@ Some stores do not want a checkout at all. They quote, confirm and collect payme
 * Button text, colours, corner roundness, full width and WhatsApp icon, with a live preview
 * A setup wizard that gets you running in about a minute
 
-=== Order request analytics ===
+=== WhatsApp order tracking and analytics ===
 
 * A dashboard with order requests, requested value, units requested and whole cart requests, compared with the previous period
 * Daily charts and a list of your most requested products
@@ -112,11 +113,11 @@ There is no limit on products, requests or messages in the free version.
 * Shops that sell made to order, personalised or quote based products
 * Wholesale and B2B catalogs that agree prices in the chat
 * Local businesses that deliver by hand or take payment on delivery
-* Anyone who wants a WhatsApp click to chat button without an API account
+* Anyone who wants a WhatsApp click to chat order button without an API account
 
 = Free vs Pro =
 
-The free plugin opens WhatsApp and lets you take it from there. [Pro](https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/) connects your number to the official WhatsApp Business Platform through Twilio, so your store can talk to customers on its own. Pro installs on top of the free plugin and keeps your settings.
+The free plugin opens WhatsApp and lets you take it from there. [Pro](https://devdiggers.com/product/woocommerce-purchase-via-whatsapp/) is for stores that want the chat itself to do the work. It connects your number to the official WhatsApp Business Platform through Twilio, so your store can talk to customers on its own. Pro installs on top of the free plugin and keeps your settings.
 
 === Orders created in the chat (Pro) ===
 
@@ -138,12 +139,18 @@ The free plugin opens WhatsApp and lets you take it from there. [Pro](https://de
 * A dashboard with WhatsApp orders, revenue and delivery rate
 * Pay from a DevDiggers Wallet balance inside the chat
 
+= A note from the founder =
+
+Hi, I am Yash Kapoor, founder of DevDiggers. Many shoppers would rather send a message than fill in a checkout form, and someone on the team ends up retyping every order. I built this plugin so a chat turns into a real WooCommerce order. My team keeps it updated for every new WooCommerce release, and the developers who wrote it answer the support forum.
+
+Have a question? Ask in the support forum or message me directly on [LinkedIn](https://www.linkedin.com/in/iamyashkapoor/).
+
 == Installation ==
 
 = Automatic installation =
 
 1. In your WordPress admin, go to **Plugins > Add New**.
-2. Search for "DevDiggers Order via Chat for WooCommerce".
+2. Search for "DevDiggers Order via Chat".
 3. Click **Install Now**, then **Activate**. WooCommerce must be active.
 
 = Manual installation =
@@ -171,6 +178,10 @@ The free plugin opens WhatsApp and lets you take it from there. [Pro](https://de
 
 Install and activate the plugin, add your WhatsApp number in the setup wizard, and the button appears on your product and cart pages. Change its position, text and colours under **Configuration > Display**.
 
+= Is there a live demo? =
+
+Yes. [Try the free plugin live demo](https://demo.devdiggers.com/order-via-chat-for-woocommerce/) to tap the button on a product and see the WhatsApp message it writes.
+
 = Do I need a WhatsApp Business API or Twilio account? =
 
 No. The free plugin opens an ordinary WhatsApp chat with your number, so your personal WhatsApp or the free WhatsApp Business app is enough. Only Pro, which sends messages from your store automatically, uses Twilio.
@@ -179,9 +190,17 @@ No. The free plugin opens an ordinary WhatsApp chat with your number, so your pe
 
 No. The customer sends you their request in WhatsApp and you agree the order with them there. If you want the chat to create the WooCommerce order by itself, that is what Pro does.
 
-= Can I take orders on WhatsApp only, without a checkout? =
+= Can customers send their whole cart to WhatsApp? =
 
-Yes. Turn on Catalog Mode under **Configuration > General**. The WhatsApp button replaces Add to cart on the products you sell through WhatsApp, and you can hide their prices too.
+Yes. The cart page gets a button that sends every item, with options, quantities, prices and the estimated subtotal, as one WhatsApp message. It works in the classic cart and the Cart block.
+
+= How do I turn WooCommerce into a catalog and take orders on WhatsApp only? =
+
+Turn on Catalog Mode under **Configuration > General**. The WhatsApp button replaces Add to cart on the products you sell through WhatsApp, adding them to the cart is blocked, and you can hide their prices too.
+
+= Can I hide prices and use WhatsApp for price requests? =
+
+Yes. In Catalog Mode you can hide prices on the products you choose, which suits wholesale, custom and "ask for price" items. Prices are left out of the WhatsApp message as well.
 
 = Can I change the message the customer sends? =
 
@@ -195,11 +214,11 @@ Yes, on the product page. The button waits until the customer picks the options,
 
 Yes. The cart button appears under the Cart block, the shop button works in Product Collection grids, and the order received button appears on the block order confirmation page too.
 
-= Can I add the button to a page builder or custom template? =
+= Can I add the WhatsApp button to a page builder or custom template? =
 
 Yes. Use the Order on WhatsApp block, or the shortcode `[ddwcpvw_button]`. Add `id="123"` for a specific product, or `type="cart"` to send the cart. The shortcode works in Elementor, Divi and other builders.
 
-= Which number format should I use? =
+= Which WhatsApp number format should I use? =
 
 Use the full international number with the country code, for example +15551234567. If you leave out the plus, the plugin adds your store's country code.
 
@@ -207,9 +226,13 @@ Use the full international number with the country code, for example +1555123456
 
 Yes. Exclude single products or whole categories under **Configuration > General**. You can also hide it on out of stock products.
 
-= Can I show the button on phones only? =
+= Can I show the WhatsApp button on phones only? =
 
 Yes. Under **Configuration > Display > Devices**, choose "Phones and tablets only". The setting uses CSS, so it works with page caching.
+
+= Can I add a floating WhatsApp chat button as well? =
+
+Yes. The floating bubble has its own number and prefilled message, can show on every page or on store pages only, and adds the product name and link on product pages.
 
 = What does the dashboard count? =
 
@@ -241,14 +264,16 @@ Use the [WordPress.org support forum](https://wordpress.org/support/plugin/devdi
 
 == Screenshots ==
 
-1. Order on WhatsApp button on a product page
+1. The WhatsApp order button on a product page, under Add to cart
 2. Delivery details popup for guests, using your checkout fields
-3. The order message, ready to send in WhatsApp
-4. Send the whole cart from the cart page
+3. WhatsApp order buttons on shop and category pages
+4. Send the whole cart as one order from the cart page
 5. Dashboard with order requests, requested value and the most requested products
-6. General settings with catalog mode and the message templates
-7. Display settings with a live button preview
-8. WhatsApp box on the order edit screen
+6. WhatsApp box on the order edit screen
+7. General settings: your WhatsApp number, guests and excluded products
+8. The order message template with product, price and customer placeholders
+9. Button text, colors and corner roundness with a live preview
+10. Floating chat button settings
 
 == External services ==
 
