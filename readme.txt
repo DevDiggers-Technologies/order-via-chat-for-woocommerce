@@ -23,6 +23,8 @@ This **[WooCommerce WhatsApp plugin](https://devdiggers.com/product/woocommerce-
 
 It works with your personal WhatsApp or the free WhatsApp Business app. There is no API account to set up, no monthly fee and no message limit, because the plugin only opens a chat. Nothing is sent through a third party server. Want to see it first? [Try the live demo](https://demo.devdiggers.com/order-via-chat-for-woocommerce/).
 
+https://www.youtube.com/watch?v=DGE_4gDALfQ
+
 = Quick links =
 
 * [Free Plugin Live Demo](https://demo.devdiggers.com/order-via-chat-for-woocommerce/)
