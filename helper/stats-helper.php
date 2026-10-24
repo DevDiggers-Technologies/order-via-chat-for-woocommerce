@@ -2,7 +2,7 @@
 /**
  * Order request counters behind the dashboard.
  *
- * @package DevDiggers Order via Chat for WooCommerce
+ * @package DevDiggers Order on WhatsApp for WooCommerce
  * @version 1.0.0
  */
 

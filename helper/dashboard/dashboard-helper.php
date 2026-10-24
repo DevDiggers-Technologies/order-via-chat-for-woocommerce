@@ -2,7 +2,7 @@
 /**
  * Dashboard data.
  *
- * @package DevDiggers Order via Chat for WooCommerce
+ * @package DevDiggers Order on WhatsApp for WooCommerce
  * @version 1.0.0
  */
 
