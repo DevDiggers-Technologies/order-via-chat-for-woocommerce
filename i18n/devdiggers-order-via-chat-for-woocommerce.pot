@@ -2,11 +2,11 @@
 # This file is distributed under the GPLv3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: DevDiggers Order via Chat for WooCommerce 1.0.0\n"
+"Project-Id-Version: DevDiggers Order via Chat for WooCommerce 1.1.0\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/devdiggers-order-via-chat-for-"
 "woocommerce\n"
-"POT-Creation-Date: 2026-10-24 14:53:14+00:00\n"
+"POT-Creation-Date: 2026-11-24 18:08:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -124,6 +124,8 @@ msgstr ""
 
 #: includes/admin/setup-wizard.php:44 includes/admin-dashboard.php:61
 #: includes/admin-dashboard.php:66 includes/admin-dashboard.php:67
+#: includes/integrations/mcp-integration.php:71
+#: includes/integrations/mcp-integration.php:94
 msgid "Order via Chat"
 msgstr ""
 
@@ -523,16 +525,16 @@ msgid ""
 "please leave us a %s rating. It really helps."
 msgstr ""
 
-#: includes/file-handler.php:59 includes/file-handler.php:123
+#: includes/file-handler.php:60 includes/file-handler.php:124
 #: src/block/index.js:13
 msgid "Order on WhatsApp"
 msgstr ""
 
-#: includes/file-handler.php:136
+#: includes/file-handler.php:137
 msgid "Send my order on WhatsApp"
 msgstr ""
 
-#: includes/file-handler.php:141
+#: includes/file-handler.php:142
 msgid "Hi! I have a question about your store."
 msgstr ""
 
@@ -732,6 +734,196 @@ msgstr ""
 #: includes/global-functions.php:381
 #. translators: %s: list of tags.
 msgid "Available tags: %s. Wrap words in *stars* for bold."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:72
+msgid ""
+"Ask how many order requests customers sent to your WhatsApp, which products "
+"they ask for most, why a product has no WhatsApp button and how ordering on "
+"WhatsApp is set up."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:95
+msgid ""
+"Ordering on WhatsApp: order requests, most requested products, button "
+"availability and settings."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:179
+msgid "Product or variation ID."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:183
+msgid "Product SKU, instead of the ID."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:189
+msgid "Order requests report"
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:190
+msgid ""
+"How many order requests customers sent to the store's WhatsApp in a date "
+"range, compared with the period before: requests, how many were whole carts "
+"vs single products, units and the value of the requested items at the "
+"prices of the moment, plus a per-day list. A request is counted when the "
+"customer taps the button and WhatsApp opens with the order message, so it "
+"is a lead, not a paid order. Individual requests and customer details are "
+"not stored, only these totals (kept 400 days)."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:194
+msgid ""
+"First day, Y-m-d in the store timezone. Defaults to 29 days before "
+"\"before\"."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:195
+#: includes/integrations/mcp-integration.php:277
+msgid "Last day, Y-m-d. Defaults to today."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:212
+msgid "Most requested products"
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:213
+msgid ""
+"The products customers request most on WhatsApp since tracking began (all "
+"time, the same list as the dashboard), with request and unit counts, stock "
+"and whether the product can still be ordered on WhatsApp today."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:234
+msgid "Check a product's WhatsApp button"
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:235
+msgid ""
+"Whether one product can be ordered on WhatsApp right now and, if not, every "
+"reason why (plugin off, no WhatsApp number, product or category excluded, "
+"not purchasable, out of stock). Use it for \"why is there no WhatsApp "
+"button on this product\". Give product_id or sku."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:249
+msgid "WhatsApp ordering settings"
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:250
+msgid ""
+"How ordering on WhatsApp is set up: on or off, the store's WhatsApp number, "
+"guests, catalog mode, hidden prices, excluded products and categories, "
+"where the button shows, the floating chat button, the message templates and "
+"the setup checklist with what is still missing."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:266
+#: includes/integrations/mcp-integration.php:885
+msgid "WhatsApp ordering review"
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:267
+msgid ""
+"A short review of ordering on WhatsApp for a period: request trend against "
+"the period before, the products people ask for, products that can no longer "
+"be ordered, and setup gaps, ending with what to do next."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:273
+msgid "First day, Y-m-d. Defaults to 29 days before \"before\"."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:289
+msgid "Exclude or include a product"
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:290
+msgid ""
+"Take a product off WhatsApp ordering (excluded: true) or allow it again "
+"(excluded: false), the same as the Excluded products field under "
+"Configuration > General. Variations follow their parent, so pass the parent "
+"product ID."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:296
+msgid "True to exclude the product, false to allow it again."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:446
+msgid "The start date (\"after\") must be on or before the end date (\"before\")."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:489
+msgid "Product not found. Pass a valid product_id or sku."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:691
+msgid "Ordering on WhatsApp is switched off (Configuration > General)."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:695
+msgid ""
+"No WhatsApp number is saved, so every button is hidden (Configuration > "
+"General)."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:699
+msgid "The product is in Excluded products."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:706
+#. translators: %s: category names.
+msgid "Its category is excluded: %s."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:710
+msgid "The product cannot be bought (not published or no price)."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:714
+msgid "It is out of stock and out of stock products are hidden."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:720
+msgid ""
+"Another plugin or custom code hides it (the ddwcpvw_is_product_available "
+"filter)."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:812
+msgid "Pass \"excluded\": true to exclude the product or false to allow it again."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:819
+#. translators: %d: parent product ID.
+msgid "Exclusions apply to whole products. Use the parent product ID %d."
+msgstr ""
+
+#: includes/integrations/mcp-integration.php:862
+#. translators: 1: first day, 2: last day.
+msgid ""
+"Review ordering on WhatsApp from %1$s to %2$s.\n"
+"\n"
+"Use the Order via Chat tools:\n"
+"1. order-via-chat-requests-report with after and before set to those days.\n"
+"2. order-via-chat-top-products with limit 10.\n"
+"3. order-via-chat-get-settings for the setup and its checklist.\n"
+"4. order-via-chat-check-product for any top product whose can_order is "
+"false.\n"
+"\n"
+"Then write a short review for the store owner:\n"
+"- Requests, cart vs single product requests and requested value, with the "
+"change against the previous period in percent (say \"new\" when the "
+"previous period had none).\n"
+"- The busiest days, and the products people ask for most.\n"
+"- Popular products that can no longer be ordered on WhatsApp, and why.\n"
+"- Setup gaps from the checklist and settings (no number, button not placed, "
+"ordering off).\n"
+"- Up to three next steps.\n"
+"Remember a request is a lead (WhatsApp opened with the order), not a paid "
+"order. Use the store currency, round money to 2 decimals and keep it under "
+"250 words. Say plainly when there were no requests."
 msgstr ""
 
 #: templates/admin/configuration/display-configuration-template.php:29
@@ -1148,112 +1340,120 @@ msgstr ""
 msgid "Message the customer when the order status changes"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:65
+#: templates/admin/dashboard/dashboard-template.php:61
+msgid "None in either period"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:62
+msgid "No change vs previous period"
+msgstr ""
+
+#: templates/admin/dashboard/dashboard-template.php:76
 #. translators: %s: admin display name.
 msgid "Welcome back, %s! 👋🏻"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:66
+#: templates/admin/dashboard/dashboard-template.php:77
 msgid ""
 "How many customers are sending you orders on WhatsApp, and what they ask "
 "for."
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:70
-#: templates/admin/dashboard/dashboard-template.php:122
+#: templates/admin/dashboard/dashboard-template.php:81
+#: templates/admin/dashboard/dashboard-template.php:141
 msgid "Order Requests"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:77
-#: templates/admin/dashboard/dashboard-template.php:102
+#: templates/admin/dashboard/dashboard-template.php:90
+#: templates/admin/dashboard/dashboard-template.php:121
 msgid "Requested Value"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:85
+#: templates/admin/dashboard/dashboard-template.php:100
 msgid "Units Requested"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:92
+#: templates/admin/dashboard/dashboard-template.php:109
 msgid "Whole Cart Requests"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:111
+#: templates/admin/dashboard/dashboard-template.php:130
 msgid "Value"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:116
+#: templates/admin/dashboard/dashboard-template.php:135
 msgid "No order requests yet"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:117
+#: templates/admin/dashboard/dashboard-template.php:136
 msgid ""
 "Each time a customer sends you a product or cart on WhatsApp, its value "
 "shows up here."
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:130
+#: templates/admin/dashboard/dashboard-template.php:149
 msgid "Requests"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:135
+#: templates/admin/dashboard/dashboard-template.php:154
 msgid "No requests in this period"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:136
+#: templates/admin/dashboard/dashboard-template.php:155
 msgid "Try a wider date range, or tap the WhatsApp button on one of your products."
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:142
+#: templates/admin/dashboard/dashboard-template.php:161
 msgid "Finish Setting Up"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:146
+#: templates/admin/dashboard/dashboard-template.php:165
 msgid "Most Requested Products"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:167
+#: templates/admin/dashboard/dashboard-template.php:186
 msgid "Count real orders and revenue, not just requests"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:168
+#: templates/admin/dashboard/dashboard-template.php:187
 msgid ""
 "With Pro the chat places the order itself, so this dashboard shows what "
 "WhatsApp actually sold."
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:170
+#: templates/admin/dashboard/dashboard-template.php:189
 msgid "WhatsApp orders and revenue, day by day"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:171
+#: templates/admin/dashboard/dashboard-template.php:190
 msgid "Messages sent and the share that were delivered"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:172
+#: templates/admin/dashboard/dashboard-template.php:191
 msgid "Failed messages with the reason, so nothing slips by"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:195
+#: templates/admin/dashboard/dashboard-template.php:214
 #. translators: 1: completed steps, 2: total steps.
 msgid "%1$d of %2$d steps done"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:223
+#: templates/admin/dashboard/dashboard-template.php:242
 msgid "No products requested yet"
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:224
+#: templates/admin/dashboard/dashboard-template.php:243
 msgid "The products customers ask for most on WhatsApp will be listed here."
 msgstr ""
 
-#: templates/admin/dashboard/dashboard-template.php:240
+#: templates/admin/dashboard/dashboard-template.php:255
 #. translators: %d: number of units requested.
 msgid "%d unit requested"
 msgid_plural "%d units requested"
 msgstr[0] ""
 msgstr[1] ""
 
-#: templates/admin/dashboard/dashboard-template.php:247
+#: templates/admin/dashboard/dashboard-template.php:258
 #. translators: %d: number of requests.
 msgid "%d request"
 msgid_plural "%d requests"

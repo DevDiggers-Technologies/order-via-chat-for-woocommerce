@@ -24,6 +24,7 @@ if ( ! class_exists( 'DDWCPVW_File_Handler' ) ) {
 
 			// Order requests reach admin-ajax.php, which counts as admin.
 			new Front\DDWCPVW_Front_Ajax_Hooks( $ddwcpvw_configuration );
+			new Integrations\DDWCPVW_MCP_Integration( $ddwcpvw_configuration );
 
 			// Outside the front end check below: the editor previews the block over the REST API.
 			// This class is built on init, so register now rather than hooking init again.

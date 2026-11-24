@@ -88,7 +88,7 @@ if ( ! class_exists( 'DDWCPVW_Dashboard_Helper' ) ) {
 					'name'      => wp_strip_all_tags( $product->get_name() ),
 					'requests'  => $totals['requests'],
 					'units'     => $totals['units'],
-					'thumbnail' => $product->get_image( 'thumbnail', [ 'class' => 'ddwcpvw-dash-thumb-img' ], true ),
+					'thumbnail' => $product->get_image( [ 72, 72 ] ),
 					'edit_url'  => get_edit_post_link( $product->get_parent_id() ? $product->get_parent_id() : $product_id, '' ),
 				];
 
@@ -159,15 +159,18 @@ if ( ! class_exists( 'DDWCPVW_Dashboard_Helper' ) ) {
 			$value    = (float) $value;
 			$previous = (float) $previous;
 
+			// Nothing in the previous period: no percentage to give, so null makes the card say
+			// "None in the previous period" ( a "100%" read as a doubling ).
 			if ( $previous <= 0 ) {
-				$change = $value > 0 ? 100 : 0;
+				$change = $value > 0 ? null : 0;
 			} else {
-				$change = ( ( $value - $previous ) / $previous ) * 100;
+				$change = round( ( ( $value - $previous ) / $previous ) * 100, 1 );
 			}
 
 			return [
 				'value'       => $value,
-				'change'      => round( $change, 1 ),
+				'previous'    => $previous,
+				'change'      => $change,
 				'is_positive' => $value >= $previous,
 			];
 		}
