@@ -1,6 +1,6 @@
 {
   "name": "devdiggers-order-via-chat-for-woocommerce",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "DevDiggers Order via Chat for WooCommerce",
   "main": "index.js",
   "scripts": {

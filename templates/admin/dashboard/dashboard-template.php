@@ -50,6 +50,17 @@ if ( ! class_exists( 'DDWCPVW_Dashboard_Template' ) ) {
 		protected function ddwcpvw_render() {
 			$summary    = $this->dashboard_data['summary'];
 			$date_label = $this->dashboard_data['date_range']['label'];
+
+			// A card whose figure did not move still gets a line under it.
+			$no_change = function ( $metric ) {
+				if ( null === $metric['change'] || 0.0 !== (float) $metric['change'] ) {
+					return '';
+				}
+
+				return empty( $metric['value'] )
+					? esc_html__( 'None in either period', 'devdiggers-order-via-chat-for-woocommerce' )
+					: esc_html__( 'No change vs previous period', 'devdiggers-order-via-chat-for-woocommerce' );
+			};
 			$pending    = array_filter(
 				$this->dashboard_data['checklist'],
 				function ( $step ) {
@@ -71,6 +82,8 @@ if ( ! class_exists( 'DDWCPVW_Dashboard_Template' ) ) {
 							'value'       => $summary['requests']['value'],
 							'change'      => $summary['requests']['change'],
 							'is_positive' => $summary['requests']['is_positive'],
+							'previous'    => number_format_i18n( $summary['requests']['previous'] ),
+							'note'        => $no_change( $summary['requests'] ),
 							'icon'        => $this->ddwcpvw_get_stat_icon( '<path d="M21 11.5a8.4 8.4 0 0 1-12.3 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5Z"/>' ),
 						],
 						[
@@ -79,6 +92,8 @@ if ( ! class_exists( 'DDWCPVW_Dashboard_Template' ) ) {
 							'value_type'  => 'html',
 							'change'      => $summary['value']['change'],
 							'is_positive' => $summary['value']['is_positive'],
+							'previous'    => wc_price( $summary['value']['previous'] ),
+							'note'        => $no_change( $summary['value'] ),
 							'icon'        => $this->ddwcpvw_get_stat_icon( '<path d="M3.5 3.5v14.2a2.8 2.8 0 0 0 2.8 2.8h14.2"/><path d="M8 17.2v-3.6M12.6 17.2v-7M17.2 17.2v-4.8"/>' ),
 						],
 						[
@@ -86,6 +101,8 @@ if ( ! class_exists( 'DDWCPVW_Dashboard_Template' ) ) {
 							'value'       => $summary['units']['value'],
 							'change'      => $summary['units']['change'],
 							'is_positive' => $summary['units']['is_positive'],
+							'previous'    => number_format_i18n( $summary['units']['previous'] ),
+							'note'        => $no_change( $summary['units'] ),
 							'icon'        => $this->ddwcpvw_get_stat_icon( '<path d="M4 7.5h16V19a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7.5Z"/><path d="M8.5 7.5V6a3.5 3.5 0 0 1 7 0v1.5"/>' ),
 						],
 						[
@@ -93,6 +110,8 @@ if ( ! class_exists( 'DDWCPVW_Dashboard_Template' ) ) {
 							'value'       => $summary['cart']['value'],
 							'change'      => $summary['cart']['change'],
 							'is_positive' => $summary['cart']['is_positive'],
+							'previous'    => number_format_i18n( $summary['cart']['previous'] ),
+							'note'        => $no_change( $summary['cart'] ),
 							'icon'        => $this->ddwcpvw_get_stat_icon( '<circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3.5h3l2.4 11.6h11.6l2-8.1H6.6"/>' ),
 						],
 					],
@@ -225,32 +244,22 @@ if ( ! class_exists( 'DDWCPVW_Dashboard_Template' ) ) {
 				);
 				return;
 			}
-			?>
-			<div class="ddwcpvw-dash-list">
-				<?php foreach ( $products as $product ) : ?>
-					<a class="ddwcpvw-dash-list-item" href="<?php echo esc_url( $product['edit_url'] ); ?>">
-						<?php if ( ! empty( $product['thumbnail'] ) ) : ?>
-							<span class="ddwcpvw-dash-thumb" aria-hidden="true"><?php echo wp_kses_post( $product['thumbnail'] ); ?></span>
-						<?php endif; ?>
-						<div class="ddwcpvw-dash-list-info">
-							<strong><?php echo esc_html( $product['name'] ); ?></strong>
-							<span>
-								<?php
-								/* translators: %d: number of units requested. */
-								printf( esc_html( _n( '%d unit requested', '%d units requested', $product['units'], 'devdiggers-order-via-chat-for-woocommerce' ) ), absint( $product['units'] ) );
-								?>
-							</span>
-						</div>
-						<div class="ddwcpvw-dash-list-value">
-							<?php
-							/* translators: %d: number of requests. */
-							printf( esc_html( _n( '%d request', '%d requests', $product['requests'], 'devdiggers-order-via-chat-for-woocommerce' ) ), absint( $product['requests'] ) );
-							?>
-						</div>
-					</a>
-				<?php endforeach; ?>
-			</div>
-			<?php
+
+			$items = [];
+
+			foreach ( $products as $product ) {
+				$items[] = [
+					'url'   => $product['edit_url'],
+					'title' => $product['name'],
+					/* translators: %d: number of units requested. */
+					'meta'  => sprintf( _n( '%d unit requested', '%d units requested', $product['units'], 'devdiggers-order-via-chat-for-woocommerce' ), absint( $product['units'] ) ),
+					'image' => $product['thumbnail'],
+					/* translators: %d: number of requests. */
+					'value' => esc_html( sprintf( _n( '%d request', '%d requests', $product['requests'], 'devdiggers-order-via-chat-for-woocommerce' ), absint( $product['requests'] ) ) ),
+				];
+			}
+
+			DDFW_Dashboard::render_list( $items );
 		}
 
 		/**

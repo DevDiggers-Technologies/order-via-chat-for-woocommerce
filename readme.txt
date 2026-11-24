@@ -9,7 +9,7 @@ Tested up to: 7.1
 Requires PHP: 7.4
 WC requires at least: 9.0
 WC tested up to: 11.2
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -106,6 +106,17 @@ Some stores do not want a checkout at all. They quote, confirm and collect payme
 * Daily charts and a list of your most requested products
 * All figures are counted on your own site and stored in your own database
 * Optional events for Google Analytics 4, Google Tag Manager and Meta Pixel when a customer opens WhatsApp with an order, using the tracking code already on your site
+
+=== AI assistants (MCP) ===
+
+Ask Claude, ChatGPT, Cursor, VS Code or any MCP client about ordering on WhatsApp in plain words: "How many WhatsApp order requests did we get this month?", "Which products do people ask for most?", "Why is there no WhatsApp button on this product?"
+
+* Tools for the order requests report (compared with the period before), the most requested products, a product's WhatsApp button check and a settings summary
+* A WhatsApp ordering review prompt
+* Optional: let the assistant exclude a product from WhatsApp ordering or allow it again, off until you allow changes and logged under WooCommerce > Status > Logs
+* Store managers only; customers and visitors are refused
+* Managed in DevDiggers Plugins > AI & MCP: one MCP server for every DevDiggers plugin, an on / off switch per plugin and per write tool (write tools start off), a Try panel and an activity log
+* Needs WordPress 6.9+ and the MCP Adapter (WooCommerce 10.3+ bundles it)
 
 There is no limit on products, requests or messages in the free version.
 
@@ -334,10 +345,21 @@ The build configuration is in `webpack.config.js` and `babel.config.js`. Two thi
 
 == Changelog ==
 
+= 1.1.0 =
+* Added: AI assistants (MCP). Ask Claude, ChatGPT, Cursor, VS Code or any MCP client how many WhatsApp order requests you got, which products people ask for most, why a product has no WhatsApp button, or for a settings summary, with a WhatsApp ordering review prompt.
+* Added: An optional AI tool to exclude a product from WhatsApp ordering or allow it again. It stays off until you turn on Allow changes.
+* Added: DevDiggers Plugins > AI & MCP page. Connect Claude, ChatGPT, Claude Code, Codex, Cursor, VS Code or any MCP client by signing in and clicking Allow in WordPress, with nothing to copy. Turn each plugin and each write tool on or off, try tools in the Try panel and check the activity log.
+* Improved: Dashboard cards show the previous period's figure and a short note under every number, and say "None in the previous period" instead of a misleading 100% change.
+* Improved: Updated the DevDiggers framework to 1.3.0. On edit screens the title bar with Save stays visible while you scroll on desktop.
+* Fixed: Charts and pickers no longer break when a theme or plugin replaces the shared select2 script.
+
 = 1.0.0 =
 * Initial free release.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Adds AI assistants (MCP), a clearer Dashboard and the DevDiggers framework 1.3.0.
 
 = 1.0.0 =
 First release. After activating, run the setup wizard and add your WhatsApp number.
